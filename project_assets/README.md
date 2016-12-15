@@ -1,0 +1,1 @@
+Directory for all documentation and assets associated with the design exercise.
