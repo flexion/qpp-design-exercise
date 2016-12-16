@@ -1,0 +1,16 @@
+<section class="usa-grid usa-section">
+  <h2>Welcome</h2>
+  <div class="usa-alert usa-alert-success">
+    <div class="usa-alert-body">
+      <!-- change message based on what step user is in the process -->
+      <h3 class="usa-alert-heading">Your account has been verified</h3>
+      <p class="usa-alert-text">The next step is to <a href="create-profile.html">Create a profile</a></p>
+    </div>
+  </div>
+  <div class="button_wrapper">
+    <!-- change button style based on what step user is in the process -->
+    <button class="usa-button-outline-inverse usa-button-hover" disabled>Confirm Account</button>
+    <a class="usa-button usa-button-big" [routerLink]="['/profile']">Create Profile</a>
+    <button class="usa-button-outline-inverse usa-button-hover"  [routerLink]="['/practice']">Connect with Practice</button>
+  </div>
+</section>
