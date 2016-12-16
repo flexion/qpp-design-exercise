@@ -18,7 +18,7 @@ const appRoutes: Routes = [
     {path: '*', redirectTo: 'profile'}
 ];
 
-export const routes = RouterModule.forRoot(appRoutes);
+//export const routes = RouterModule.forRoot(appRoutes);
 
 @NgModule({
     declarations: [
