@@ -24,17 +24,11 @@
       </tr>
       </thead>
       <tbody>
-      <tr>
-        <th scope="row">Practice Name</th>
-        <td>44446519997</td>
+      <tr  *ngFor="let practice of practices">
+        <th scope="row">{{practice.name}}</th>
+        <td>{{practice.npi}}</td>
         <td>Authorized Official</td>
-        <td><span class="usa-color-text usa-color-text-green">Approved</span></td>
-      </tr>
-      <tr>
-        <th scope="row">Practice Name</th>
-        <td>44446519997</td>
-        <td>Authorized Official</td>
-        <td><span class="usa-color-text usa-color-text-secondary-dark">Pending</span></td>
+        <td><span class="usa-color-text" [ngClass]="{'usa-color-text-primary': practice.status === 'approved', 'usa-color-text-secondary-dark': practice.status ==='pending'}">{{practice.status}}</span></td>
       </tr>
       </tbody>
     </table>
