@@ -2,25 +2,25 @@
   <h2>Create Profile</h2>
   <p>Fill in the form below to create your profile.</p>
   <p>We respect your privacy and will never sell your personal information. View the <a href="https://qpp.cms.gov/privacy">CMS Privacy Notice</a> to learn more.
-  <form>
+  <form #f="ngForm" (ngSubmit)="onSubmit()">
     <div class="usa-width-one-half">
       <div class="usa-form">
         <fieldset>
           <legend>Name</legend>
           <label for="title">Title</label>
-          <input class="usa-input-tiny" id="title" name="title" type="text">
+          <input class="usa-input-tiny" id="title" name="title" type="text" [(ngModel)]="user.title" >
 
           <label for="first-name">First name <span class="usa-additional_text">Required</span></label>
-          <input id="first-name" name="first-name" type="text" required="" aria-required="true">
+          <input id="first-name" name="first-name" type="text" aria-required="true" [(ngModel)]="user.first_name" required>
 
           <label for="middle-name">Middle name</label>
-          <input id="middle-name" name="middle-name" type="text">
+          <input id="middle-name" name="middle-name" type="text" [(ngModel)]="user.middle_name" >
 
           <label for="last-name">Last name <span class="usa-additional_text">Required</span></label>
-          <input id="last-name" name="last-name" type="text" required="" aria-required="true">
+          <input id="last-name" name="last-name" type="text" aria-required="true" [(ngModel)]="user.last_name" required>
 
           <label for="suffix">Suffix</label>
-          <input class="usa-input-tiny" id="suffix" name="suffix" type="text">
+          <input class="usa-input-tiny" id="suffix" name="suffix" type="text" [(ngModel)]="user.suffix" >
         </fieldset>
         <fieldset class="margin-top-2">
           <legend>Date of birth</legend>
@@ -31,18 +31,18 @@
             <div class="usa-form-group usa-form-group-month">
               <label for="date_of_birth_1">Month</label>
               <input class="usa-input-inline" aria-describedby="dobHint" class="usa-form-control" id="date_of_birth_1"
-                     name="date_of_birth_1" pattern="0?[1-9]|1[012]" type="number" min="1" max="12" value="">
+                     name="date_of_birth_1" pattern="0?[1-9]|1[012]" type="number" min="1" max="12" value="" [(ngModel)]="user.birth_month" required>
             </div>
             <div class="usa-form-group usa-form-group-day">
               <label for="date_of_birth_2">Day</label>
               <input class="usa-input-inline" aria-describedby="dobHint" class="usa-form-control" id="date_of_birth_2"
                      name="date_of_birth_2" pattern="0?[1-9]|1[0-9]|2[0-9]|3[01]" type="number" min="1" max="31"
-                     value="">
+                     value="" [(ngModel)]="user.birth_day" required>
             </div>
             <div class="usa-form-group usa-form-group-year">
               <label for="date_of_birth_3">Year</label>
               <input class="usa-input-inline" aria-describedby="dobHint" class="usa-form-control" id="date_of_birth_3"
-                     name="date_of_birth_3" pattern="[0-9]{4}" type="number" min="1900" max="2000" value="">
+                     name="date_of_birth_3" pattern="[0-9]{4}" type="number" min="1900" max="2000" value="" [(ngModel)]="user.birth_year" required>
             </div>
           </div>
         </fieldset>
@@ -53,29 +53,29 @@
         <fieldset>
           <legend>Company</legend>
           <label for="company">Company <span class="usa-additional_text">Required</span></label>
-          <input id="company" name="company" type="text">
+          <input id="company" name="company" type="text" [(ngModel)]="user.company_name" >
 
           <label for="job-title">Job title <span class="usa-additional_text">Required</span></label>
-          <input id="job-title" name="job-title" type="text">
+          <input id="job-title" name="job-title" type="text" [(ngModel)]="user.company_title" >
 
         </fieldset>
         <fieldset class="margin-top-2">
           <legend>Mailing address</legend>
           <label for="mailing-address-1">Street address 1 <span class="usa-additional_text">Required</span></label>
-          <input id="mailing-address-1" name="mailing-address-1" type="text">
+          <input id="mailing-address-1" name="mailing-address-1" type="text" [(ngModel)]="user.address" required>
 
           <label for="mailing-address-2">Street address 2 <span class="usa-additional_text">Optional</span></label>
-          <input id="mailing-address-2" name="mailing-address-2" type="text">
+          <input id="mailing-address-2" name="mailing-address-2" type="text" [(ngModel)]="user.address2">
 
           <div>
             <div class="usa-input-grid usa-input-grid-medium">
               <label for="city">City <span class="usa-additional_text">Required</span></label>
-              <input id="city" name="city" type="text">
+              <input id="city" name="city" type="text" [(ngModel)]="user.city" required>
             </div>
 
             <div class="usa-input-grid usa-input-grid-small">
               <label for="state">State <span class="usa-additional_text">Required</span></label>
-              <select id="state" name="state">
+              <select id="state" name="state" [(ngModel)]="user.state" required>
                 <option value></option>
                 <option value="AL">Alabama</option>
                 <option value="AK">Alaska</option>
@@ -134,9 +134,10 @@
 
           <label for="zip">ZIP <span class="usa-additional_text">Required</span></label>
           <input class="usa-input-medium" id="zip" name="zip" type="text" pattern="[\d]{5}(-[\d]{4})?"
-                 data-grouplength="5,4" data-delimiter="-" data-politespace>
+                 data-grouplength="5,4" data-delimiter="-" data-politespace [(ngModel)]="user.zip" required>
         </fieldset>
-        <a class="usa-button usa-button-big" [routerLink]="['/steps']">Submit</a>
+        <button class="usa-button usa-button-big" type="submit" [disabled]="!f.valid">Submit</button>
+
       </div>
     </div>
   </form>
