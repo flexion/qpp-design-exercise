@@ -1,6 +1,7 @@
 <section class="usa-grid usa-section">
   <h2>Create Profile</h2>
   <p>Fill in the form below to create your profile.</p>
+  <p>We respect your privacy and will never sell your personal information. View the <a href="https://qpp.cms.gov/privacy">CMS Privacy Notice</a> to learn more.
   <form>
     <div class="usa-width-one-half">
       <div class="usa-form">
@@ -24,6 +25,7 @@
         <fieldset class="margin-top-2">
           <legend>Date of birth</legend>
           <span class="usa-form-hint" id="dobHint">For example: 04 28 1986</span>
+          <span class="usa-additional_text">Required</span>
 
           <div class="usa-date-of-birth">
             <div class="usa-form-group usa-form-group-month">
@@ -49,8 +51,17 @@
     <div class="usa-width-one-half">
       <div class="usa-form">
         <fieldset>
+          <legend>Company</legend>
+          <label for="company">Company <span class="usa-additional_text">Required</span></label>
+          <input id="company" name="company" type="text">
+
+          <label for="job-title">Job title <span class="usa-additional_text">Required</span></label>
+          <input id="job-title" name="job-title" type="text">
+
+        </fieldset>
+        <fieldset class="margin-top-2">
           <legend>Mailing address</legend>
-          <label for="mailing-address-1">Street address 1</label>
+          <label for="mailing-address-1">Street address 1 <span class="usa-additional_text">Required</span></label>
           <input id="mailing-address-1" name="mailing-address-1" type="text">
 
           <label for="mailing-address-2">Street address 2 <span class="usa-additional_text">Optional</span></label>
@@ -58,12 +69,12 @@
 
           <div>
             <div class="usa-input-grid usa-input-grid-medium">
-              <label for="city">City</label>
+              <label for="city">City <span class="usa-additional_text">Required</span></label>
               <input id="city" name="city" type="text">
             </div>
 
             <div class="usa-input-grid usa-input-grid-small">
-              <label for="state">State</label>
+              <label for="state">State <span class="usa-additional_text">Required</span></label>
               <select id="state" name="state">
                 <option value></option>
                 <option value="AL">Alabama</option>
@@ -121,7 +132,7 @@
             </div>
           </div>
 
-          <label for="zip">ZIP</label>
+          <label for="zip">ZIP <span class="usa-additional_text">Required</span></label>
           <input class="usa-input-medium" id="zip" name="zip" type="text" pattern="[\d]{5}(-[\d]{4})?"
                  data-grouplength="5,4" data-delimiter="-" data-politespace>
         </fieldset>
