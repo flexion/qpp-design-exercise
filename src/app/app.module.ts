@@ -7,16 +7,22 @@ import {RouterModule, Routes} from '@angular/router';
 import {AppComponent} from './app.component';
 import {UsaOfficalComponent} from './usa-offical/usa-offical.component';
 import {LoginComponent} from './login/login.component';
-import { RegistrationComponent } from './registration/registration.component';
-import { ProfileComponent } from './profile/profile.component';
+import {RegistrationComponent} from './registration/registration.component';
+import {ProfileComponent} from './profile/profile.component';
 import {Authentication} from './authentication';
 import {AuthGuard} from './guard/auth.guard';
+import {DashboardComponent} from './dashboard/dashboard.component';
+import {StepsComponent} from './steps/steps.component';
+import {PracticeComponent} from './practice/practice.component';
 
 const appRoutes: Routes = [
     {path: 'login', component: LoginComponent},
     {path: 'register', component: RegistrationComponent},
     {path: 'profile', component: ProfileComponent, canActivate: [AuthGuard] },
-    {path: '**', redirectTo: 'login'}
+    {path: 'dashboard', component: DashboardComponent},
+    {path: 'steps', component: StepsComponent},
+    {path: 'practice', component: PracticeComponent},
+    {path: '*', redirectTo: 'profile'}
 ];
 
 @NgModule({
@@ -26,6 +32,9 @@ const appRoutes: Routes = [
         LoginComponent,
         RegistrationComponent,
         ProfileComponent,
+        DashboardComponent,
+        StepsComponent,
+        PracticeComponent,
     ],
     imports: [
         BrowserModule,

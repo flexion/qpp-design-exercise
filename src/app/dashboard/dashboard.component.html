@@ -1,0 +1,78 @@
+<section class="usa-grid usa-section">
+  <div class="usa-width-one-third">
+    <div class="usa-hero-callout usa-section-dark">
+      <h2>Debra</h2>
+      <p>Test Company<br />Director of Case Management</p>
+      <hr/>
+      <p>1222 E Washington Ave.<br/>Madison, WI 55104</p>
+      <button>Edit Profile</button>
+    </div>
+  </div>
+
+  <div class="usa-width-two-thirds">
+    <h2>Dashboard</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.</p>
+    <h3>Your Practices</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt commodo consequat. Duis aute irure dolor in reprehenderit.</p>
+    <table class="usa-table-borderless">
+      <thead>
+      <tr>
+        <th scope="col">Practice</th>
+        <th scope="col">NPI</th>
+        <th scope="col">Your Role</th>
+        <th scope="col">Status</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <th scope="row">Practice Name</th>
+        <td>44446519997</td>
+        <td>Authorized Official</td>
+        <td><span class="usa-color-text usa-color-text-green">Approved</span></td>
+      </tr>
+      <tr>
+        <th scope="row">Practice Name</th>
+        <td>44446519997</td>
+        <td>Authorized Official</td>
+        <td><span class="usa-color-text usa-color-text-secondary-dark">Pending</span></td>
+      </tr>
+      </tbody>
+    </table>
+    <a class="usa-button" [routerLink]="['/practice']">Connect To Practice</a>
+    <hr/>
+
+    <h3>Your Surrogates</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt commodo consequat. Duis aute irure dolor in reprehenderit.</p>
+    <table class="usa-table-borderless">
+      <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Type</th>
+        <th scope="col">Status</th>
+        <th scope="col">Action</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td scope="row">Sue</td>
+        <td>Staff</td>
+        <td><span class="usa-color-text usa-color-text-green">Approved</span></td>
+        <td>
+          <a href="">revoke access</a>
+        </td>
+      </tr>
+      <tr>
+        <td scope="row">John</td>
+        <td>Staff</td>
+        <td><span class="usa-color-text usa-color-text-secondary-dark">Pending</span></td>
+        <td>
+          <div class="button_wrapper">
+            <button>Approve</button>
+            <button class="usa-button-secondary">Deny</button>
+          </div>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</section>

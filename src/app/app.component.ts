@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {Authentication} from "./authentication";
-import {User} from "./user";
+import {Authentication} from './authentication';
+import {User} from './user';
 
 @Component({
     selector: 'app-root',
@@ -15,11 +15,7 @@ export class AppComponent implements OnInit {
     constructor(private authentication: Authentication) {
     }
 
-    loggedInAs(): string {
-        return this.authentication.getToken();
-    }
-
-    ngOnInit():void {
+    ngOnInit() {
         this.authentication.currentUser.subscribe(
             (user: User) => {
                 this.currentUser = user;

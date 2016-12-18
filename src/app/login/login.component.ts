@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || 'profile';
+        this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || 'steps';
         this.authentication.logout();
     }
 
@@ -34,7 +34,6 @@ export class LoginComponent implements OnInit {
             },
             () => {
                 console.log('complete?');
-//                this.router.navigate(['']);
             }
         );
         return null;

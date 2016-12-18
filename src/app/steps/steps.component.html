@@ -1,0 +1,36 @@
+<section class="usa-grid usa-section">
+  <h2>Complete Account Setup</h2>
+
+  <input id="carver" type="checkbox" name="historical-figures-1" disabled>
+
+  <div class="usa-alert usa-alert-success">
+    <div class="usa-alert-body">
+      <!-- change message based on what step user is in the process -->
+      <h3 class="usa-alert-heading">Your account has been verified</h3>
+      <ul class="usa-unstyled-list">
+        <li>
+          <input id="create-account" type="checkbox" onclick="this.checked=!this.checked;" checked>
+          <label for="create-account">Create a new account</label>
+        </li>
+        <li>
+          <input id="look-for-account" type="checkbox" onclick="this.checked=!this.checked;" checked>
+          <label for="look-for-account">Look for the email in your inbox</label>
+        </li>
+        <li>
+          <input id="click-verification" type="checkbox" onclick="this.checked=!this.checked;" checked>
+          <label for="click-verification">Click the verification link</label>
+        </li>
+        <li>
+          <input id="complete-profile" type="checkbox" [routerLink]="['/profile']">
+          <label for="complete-profile"><a [routerLink]="['/profile']">Complete profile</a></label>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="button_wrapper">
+    <!-- change button style based on what step user is in the process -->
+    <button class="usa-button-outline-inverse usa-button-hover" disabled>Confirm Account</button>
+    <a class="usa-button usa-button-big" [routerLink]="['/profile']">Complete Profile</a>
+    <button class="usa-button-outline-inverse usa-button-hover"  [routerLink]="['/practice']">Connect with Practice</button>
+  </div>
+</section>

@@ -1,2 +1,14 @@
+// import uswds styles as base
 @import '../../../node_modules/uswds/src/stylesheets/all.scss';
+
+// define color variables
+@import 'config/colors';
+
+// mixins
+@import 'config/mixins';
+
+// margin styles
+@import 'utilities/margins';
+
+
 @import 'app';

@@ -1,0 +1,40 @@
+.margin-top-1 {
+  @include margin(1em, null, null, null);
+}
+.margin-top-2 {
+  @include margin(2em, null, null, null);
+}
+.margin-top-3 {
+  @include margin(3em, null, null, null);
+}
+.margin-top-4 {
+  @include margin(4em, null, null, null);
+}
+.margin-top-5 {
+  @include margin(5em, null, null, null);
+}
+.margin-top-6 {
+  @include margin(6em, null, null, null);
+}
+
+@include media($medium-screen) {
+  .margin-top-tab-1 {
+    @include margin(1em, null, null, null);
+  }
+  .margin-top-tab-2 {
+    @include margin(2em, null, null, null);
+  }
+  .margin-top-tab-3 {
+    @include margin(3em, null, null, null);
+  }
+  .margin-top-tab-4 {
+    @include margin(4em, null, null, null);
+  }
+  .margin-top-tab-5 {
+    @include margin(5em, null, null, null);
+  }
+  .margin-top-tab-6 {
+    @include margin(6em, null, null, null);
+  }
+}
+

@@ -9,10 +9,10 @@
 * Permission to manage the practice has been granted and is visible.
 
 ### User Tasks
-1. Access landing page
-1. Click ‘create account’
-1. Fill in email and password and type of user and click create
-1. Enter access code that was emailed to you to confirm identity and submit
+1. ~~Access landing page~~
+1. ~~Click ‘create account’~~
+1. ~~Fill in email and password and type of user and click create~~
+1. ~~Enter access code that was emailed to you to confirm identity and submit~~
 1. Access authenticated user landing page and see next steps for user.
 1. User clicks ‘complete profile’
 1. View and complete profile form
