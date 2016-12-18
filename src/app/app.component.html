@@ -39,9 +39,9 @@
             <button class="usa-header-search-button js-search-button">Search</button>
           </li>
           <li>
-            <a href="#">Logged in as {{loggedInAs()}}</a>
+            <a *ngIf="currentUser" href="#">Logged in as {{currentUser.email}}</a>
           </li>
-          <li><a [routerLink]="['/login']">Log Out</a></li>
+          <li><a *ngIf="currentUser" [routerLink]="['/login']">Log Out</a></li>
         </ul>
       </div>
     </div>

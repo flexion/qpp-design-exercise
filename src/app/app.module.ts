@@ -10,15 +10,14 @@ import {LoginComponent} from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { ProfileComponent } from './profile/profile.component';
 import {Authentication} from './authentication';
+import {AuthGuard} from './guard/auth.guard';
 
 const appRoutes: Routes = [
     {path: 'login', component: LoginComponent},
     {path: 'register', component: RegistrationComponent},
-    {path: 'profile', component: ProfileComponent},
-    {path: '*', redirectTo: 'profile'}
+    {path: 'profile', component: ProfileComponent, canActivate: [AuthGuard] },
+    {path: '**', redirectTo: 'login'}
 ];
-
-export const routes = RouterModule.forRoot(appRoutes);
 
 @NgModule({
     declarations: [
@@ -34,7 +33,7 @@ export const routes = RouterModule.forRoot(appRoutes);
         HttpModule,
         RouterModule.forRoot(appRoutes)
     ],
-    providers: [Authentication],
+    providers: [Authentication, AuthGuard],
     bootstrap: [AppComponent]
 })
 export class AppModule {

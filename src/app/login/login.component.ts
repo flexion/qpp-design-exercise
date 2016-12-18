@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Authentication} from '../authentication';
-import {Router} from '@angular/router';
+import {Router, ActivatedRoute} from '@angular/router';
+import {User} from "../user";
 
 @Component({
     /*  selector: 'app-login', */
@@ -11,22 +12,32 @@ export class LoginComponent implements OnInit {
 
     error: string;
     model: any = {};
+    returnUrl: string;
 
-    login(): void {
-        this.authentication.login(this.model.username, this.model.password).subscribe(result => {
-            if (result) {
-                this.router.navigate(['/profile']);
-            } else {
-                this.router.navigate(['']);
-            }
-        });
-    }
-
-    constructor(private authentication: Authentication, private router: Router) {
+    constructor(private authentication: Authentication,
+                private router: Router,
+                private route: ActivatedRoute) {
     }
 
     ngOnInit() {
+        this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || 'profile';
         this.authentication.logout();
+    }
+
+    login(): void {
+        this.authentication.login(this.model.username, this.model.password).subscribe(
+            (user: User) => {
+                this.router.navigate([this.returnUrl]);
+            },
+            e => {
+                console.log('error', e)
+            },
+            () => {
+                console.log('complete?');
+//                this.router.navigate(['']);
+            }
+        );
+        return null;
     }
 
 }
