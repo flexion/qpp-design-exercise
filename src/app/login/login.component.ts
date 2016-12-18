@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Authentication} from '../authentication';
 import {Router, ActivatedRoute} from '@angular/router';
-import {User} from "../user";
+import {User} from '../user';
 
 @Component({
     /*  selector: 'app-login', */
@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
     }
 
     login(): void {
-        this.authentication.login(this.model.username, this.model.password).subscribe(
+        this.authentication.login(this.model.email, this.model.password).subscribe(
             (user: User) => {
                 this.router.navigate([this.returnUrl]);
             },
