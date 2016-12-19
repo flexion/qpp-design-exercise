@@ -7,16 +7,16 @@ Below are the steps we would normally take to develop a user story. Becuase this
 ### 1. Identify persona and epic or user story.
 1. Name and describe [the persona](https://github.com/flexion/qpp-design-exercise/blob/master/project_assets/design-deliverables/personas/QPP.Persona.-.Debra.pdf).
 1. Tell the user story.
-   
+
    At this point, we recommend that the PO focus on business-level stories so that option space of system interactions (to achieve the busines goal) is as large as possible. The UX design process explores this space of options. Here is the user story we are assuming for this exercise:
    
    ```As a Practice Manager, in order to manage my practice, I must be authorized to manage my practice.```
 
 ### 2. Refine the Product Backlog (Scrum Team).
 1. The PO explains the persona and tells the user story.
-1. Team asks clarifying questions
+1. Team asks clarifying questions.
 1. They negotiate and converge on draft acceptance criteria.
-   
+
    Acceptance criteria are the business conditions that must be true when the story is successfully completed. The criteria capture the business start state of the system and the end state. The detailed interactions in between are not included.
 
    ```A profile for the practice manager sufficient to authorize them exists.
