@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/observable/of';
 import {Subject, BehaviorSubject} from 'rxjs';
-import {User} from './user';
+import {User} from './_models/user';
 
 @Injectable()
 export class Authentication {
