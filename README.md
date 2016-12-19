@@ -1,12 +1,13 @@
 # qpp-design-exercise
-QPP Design Exercise for CMS
+
+TOC
+
 ## Design Process Steps
 Below are the steps we would normally take to develop a user story. Becuase this is a demo that does not include a full team, some of the steps are "fake", and just listed so you can see where they fall in the process. Links will take you to the artifacts that is associated with the step in the process.
-### 1. Identify persona and user story.
-1. Name and description of persona
+### 1. Identify persona and epic or user story.
+1. Name and describe [the persona](../project_assets/design-deliverables/personas/QPP.Persona.-.Debra.pdf).
 1. Tell the user story.
-
-   The level of abstractoin of the user story is determined by the PO. We recommend that user stories are as abstract as possible to give the development team the greatest innovation space possible. The sweet spot with respect to user story granularity emerges after a little trial and error. Here is the user story we are assuming for this exercise:
+   The level of abstraction of the user story is determined by the PO. We recommend that user stories are as abstract as possible to give the development team the greatest innovation space possible. The sweet spot with respect to user story granularity emerges after a little trial and error. Here is the user story we are assuming for this exercise:
    
    ```As a Practice Manager, in order to manage my practice, I must be authorized to manage my practice.```
 
