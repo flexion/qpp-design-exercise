@@ -6,10 +6,7 @@ import {Registration} from '../_models/registration';
 @Injectable()
 export class UsersService {
 
-    http: Http;
-
-    constructor(http: Http) {
-        this.http = http;
+    constructor(private http: Http) {
     }
 
     getUsers() {
