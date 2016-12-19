@@ -5,7 +5,9 @@
       <p>{{currentUser.company_name}}<br />{{currentUser.company_title}}</p>
       <hr/>
       <p>{{currentUser.address}}<br/>{{currentUser.city}}, {{currentUser.state}} {{currentUser.zip}}</p>
+      <button>Change Password</button>
       <button [routerLink]="['/profile']">Edit Profile</button>
+      <button [routerLink]="['/practice']">Manage Connections</button>
     </div>
   </div>
 
@@ -41,6 +43,7 @@
       <thead>
       <tr>
         <th scope="col">Name</th>
+        <th scope="col">Practice</th>
         <th scope="col">Type</th>
         <th scope="col">Status</th>
         <th scope="col">Action</th>
@@ -49,7 +52,9 @@
       <tbody>
       <tr>
         <td scope="row">Sue</td>
-        <td>Staff</td>
+        <!-- Maybe set the practice to a practice name that is already connected to the user -->
+        <td>Presence Saint Francis Hospital</td>
+        <td>Surrogate</td>
         <td><span class="usa-color-text usa-color-text-green">Approved</span></td>
         <td>
           <a href="">revoke access</a>
@@ -57,7 +62,8 @@
       </tr>
       <tr>
         <td scope="row">John</td>
-        <td>Staff</td>
+        <td>Presence Saint Francis Hospital</td>
+        <td>Authorized Official</td>
         <td><span class="usa-color-text usa-color-text-secondary-dark">Pending</span></td>
         <td>
           <div class="button_wrapper">
