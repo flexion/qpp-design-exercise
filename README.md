@@ -5,18 +5,31 @@ TOC
 ## Design Process Steps
 Below are the steps we would normally take to develop a user story. Becuase this is a demo that does not include a full team, some of the steps are "fake", and just listed so you can see where they fall in the process. Links will take you to the artifacts that is associated with the step in the process.
 ### 1. Identify persona and epic or user story.
-1. Name and describe [the persona](../project_assets/design-deliverables/personas/QPP.Persona.-.Debra.pdf).
+1. Name and describe [the persona](https://github.com/flexion/qpp-design-exercise/blob/master/project_assets/design-deliverables/personas/QPP.Persona.-.Debra.pdf).
 1. Tell the user story.
-   The level of abstraction of the user story is determined by the PO. We recommend that user stories are as abstract as possible to give the development team the greatest innovation space possible. The sweet spot with respect to user story granularity emerges after a little trial and error. Here is the user story we are assuming for this exercise:
+   
+   At this point, we recommend that the PO focus on business-level stories so that option space of system interactions (to achieve the busines goal) is as large as possible. The UX design process explores this space of options. Here is the user story we are assuming for this exercise:
    
    ```As a Practice Manager, in order to manage my practice, I must be authorized to manage my practice.```
 
-### 2. Refine the hypothetical Backlog (Scrum Team).
+### 2. Refine the Product Backlog (Scrum Team).
 1. The PO explains the persona and tells the user story.
 1. Team asks clarifying questions
 1. They negotiate and converge on draft acceptance criteria.
-1. The user story card is extended with the draft acceptance criteria. The criteria capture the business start state of the system and the end state. The detailed interactions in between are not included.
-The team “points” the user story using other stories as benchmarks. The story card is extended to show the results of the pointing exercise (median points).
+   
+   Acceptance criteria are the business conditions that must be true when the story is successfully completed.
+   
+1. The user story card is extended with the draft acceptance criteria.
+
+   The criteria capture the business start state of the system and the end state. The detailed interactions in between are not included.
+
+   ```A profile for the practice manager sufficient to authorize them exists.
+Permission to manage the practice has been granted and is visible.```
+
+1. The team “points” the user story using other stories as benchmarks.
+
+   The story card is extended to show the results of the pointing exercise (median points).
+
 1. NOTE: A Definition of Done (DoD) document (checklist) exists that the team has created that it applies to all stories as they are developed.
   1. 100% automated test coverage of all code we write.
   1. Linters indicate zero problems.
