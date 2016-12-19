@@ -13,6 +13,7 @@
     "address": "",
     "city": "",
     "state": "",
-    "zip": ""
+    "zip": "",
+    "step": "profile"
   }
 ]

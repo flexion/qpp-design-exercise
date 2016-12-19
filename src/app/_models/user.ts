@@ -16,6 +16,7 @@ export class User {
   city: string;
   state: string;
   zip: string;
+  step: string;
 
   constructor(values: Object = {}) {
     Object.assign(this, values);
