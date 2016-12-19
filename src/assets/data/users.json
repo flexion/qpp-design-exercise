@@ -1,0 +1,15 @@
+[
+  {
+    "id": 1,
+    "email": "debra@test.com",
+    "password": "test",
+    "first_name": "Debra",
+    "last_name": "Tester",
+    "company_name": "Test Company",
+    "title": "Director of Case Management",
+    "address": "1222 E Washington Ave.",
+    "city": "Madison",
+    "state": "WI",
+    "zip": "55104"
+  }
+]

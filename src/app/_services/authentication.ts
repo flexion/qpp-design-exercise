@@ -2,30 +2,34 @@ import {Injectable} from '@angular/core';
 import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/observable/of';
 import {Subject, BehaviorSubject} from 'rxjs';
-import {User} from './_models/user';
+import {User} from '../_models/user';
+import {Response, Http} from '@angular/http';
 
 @Injectable()
 export class Authentication {
 
     currentUser: BehaviorSubject<User> = new BehaviorSubject<User>(null);
 
-    constructor() {
-        this.currentUser.next(JSON.parse(localStorage.getItem('token')));
+    constructor(private http: Http) {
+        this.currentUser.next(JSON.parse(localStorage.getItem('currentUser')));
     }
 
-    login(email: string, password: string):Observable<User> {
-        if (email == password) {
-            let user = new User({email: email});
-            localStorage.setItem('token', JSON.stringify(user));
-            this.currentUser.next(user);
-            return Observable.of(user);
-        }
-        return Observable.throw('Invalid Login');
+    login(email: string, password: string): Observable<User> {
+        return this.http.post('/api/authenticate', {email: email, password: password})
+            .map((r: Response) => {
+                let user = r.json();
+                if (user && user.token) {
+                    localStorage.setItem('currentUser', JSON.stringify(user));
+                    this.currentUser.next(user);
+                    return Observable.of(user);
+                }
+            })
+            .catch((error: any) => Observable.throw('Authentication error'));
     }
 
     logout() {
         this.currentUser.next(null);
-        localStorage.removeItem('token');
+        localStorage.removeItem('currentUser');
     }
 
 }

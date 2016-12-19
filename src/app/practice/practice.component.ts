@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-
-import {Practice} from '../practice';
+import {Practice} from '../_models/practice';
+import {PracticesService} from '../_services/practices.service';
 
 @Component({
     selector: 'app-practice',
@@ -11,6 +11,8 @@ export class PracticeComponent implements OnInit {
 
     search = false;
     connected = false;
+    practices;
+    practicesService: PracticesService;
 
     searched() {
         this.search = true;
@@ -20,16 +22,19 @@ export class PracticeComponent implements OnInit {
         this.connected = true;
     }
 
-    practices: Practice[] = [
-        new Practice(19, 'practice 3', '32234234234', ''),
-        new Practice(18, 'practice 2', '32234234234', ''),
-        new Practice(19, 'practice 3', '32234234234', ''),
-    ];
-
-    constructor() {
+    constructor(practicesService: PracticesService) {
+        this.practicesService = practicesService;
     }
 
     ngOnInit() {
+        this.practicesService.getPractices()
+            .subscribe(
+                practices => {
+                    this.practices = practices;
+                    console.log('practices received', practices);
+                },
+                error => console.log('error fetching practices')
+            );
     }
 
 }

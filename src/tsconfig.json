@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "baseUrl": "",
+    "inlineSources": true,
     "declaration": false,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,

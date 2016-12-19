@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {Authentication} from '../authentication';
+import {Authentication} from '../_services/authentication';
 import {Router, ActivatedRoute} from '@angular/router';
-import {User} from '../user';
+import {User} from '../_models/user';
 
 @Component({
     /*  selector: 'app-login', */
@@ -30,7 +30,8 @@ export class LoginComponent implements OnInit {
                 this.router.navigate([this.returnUrl]);
             },
             e => {
-                console.log('error', e)
+                this.error = e;
+                console.log('error', e);
             },
             () => {
                 console.log('complete?');

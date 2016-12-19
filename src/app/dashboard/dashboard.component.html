@@ -1,16 +1,16 @@
 <section class="usa-grid usa-section">
   <div class="usa-width-one-third">
     <div class="usa-hero-callout usa-section-dark">
-      <h2>Debra</h2>
-      <p>Test Company<br />Director of Case Management</p>
+      <h2>{{currentUser.first_name}}</h2>
+      <p>{{currentUser.company_name}}<br />{{currentUser.company_title}}</p>
       <hr/>
-      <p>1222 E Washington Ave.<br/>Madison, WI 55104</p>
-      <button>Edit Profile</button>
+      <p>{{currentUser.address}}<br/>{{currentUser.city}}, {{currentUser.state}} {{currentUser.zip}}</p>
+      <button [routerLink]="['/profile']">Edit Profile</button>
     </div>
   </div>
 
   <div class="usa-width-two-thirds">
-    <h2>Dashboard</h2>
+    <h2>Dashboard {{currentUser.first_name}}</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.</p>
     <h3>Your Practices</h3>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt commodo consequat. Duis aute irure dolor in reprehenderit.</p>
@@ -24,7 +24,7 @@
       </tr>
       </thead>
       <tbody>
-      <tr  *ngFor="let practice of practices">
+      <tr *ngFor="let practice of practices | async">
         <th scope="row">{{practice.name}}</th>
         <td>{{practice.npi}}</td>
         <td>Authorized Official</td>

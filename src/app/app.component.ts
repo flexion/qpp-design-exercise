@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {Authentication} from './authentication';
-import {User} from './user';
+import {Authentication} from './_services/authentication';
+import {User} from './_models/user';
 
 @Component({
     selector: 'app-root',

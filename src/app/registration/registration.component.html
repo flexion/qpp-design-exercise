@@ -1,14 +1,14 @@
 <section class="usa-grid usa-section">
-  <form class="usa-form">
+  <form class="usa-form" (ngSubmit)="f.form.valid && register()" #f="ngForm">
     <fieldset>
       <legend class="usa-drop_text">Create an Account</legend>
 
-      <label for="username">Username or email address</label>
-      <input id="username" name="username" type="text" autocapitalize="off" autocorrect="off">
+      <label for="email">Email address</label>
+      <input id="email" name="email" [(ngModel)]="registration.email" #email="ngModel" type="text" autocapitalize="off" autocorrect="off">
 
       <label for="password">Password</label>
-      <input id="password" name="password" type="password">
-      <input id="password2" name="password2" type="password">
+      <input id="password" name="password" type="password" [(ngModel)]="registration.password" #password="ngModel">
+      <input id="password2" name="password2" type="password" [(ngModel)]="registration.password2" #password2="ngModel">
       <p class="usa-form-note">
         <a title="Show password" href="javascript:void(0);"
            class="usa-show_password"
