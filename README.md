@@ -8,7 +8,7 @@ Below are the steps we would normally take to develop a user story. Becuase this
 1. Name and describe [the persona](https://github.com/flexion/qpp-design-exercise/blob/master/project_assets/design-deliverables/personas/QPP.Persona.-.Debra.pdf).
 1. Tell the user story.
 
-   At this point, we recommend that the PO focus on business-level stories so that option space of system interactions (to achieve the busines goal) is as large as possible. The UX design process explores this space of options. Here is the user story we are assuming for this exercise:
+At this point, we recommend that the PO focus on business-level stories so that option space of system interactions (to achieve the busines goal) is as large as possible. The UX design process explores this space of options. Here is the user story we are assuming for this exercise:
    
    ```As a Practice Manager, in order to manage my practice, I must be authorized to manage my practice.```
 
