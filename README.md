@@ -17,26 +17,13 @@ Below are the steps we would normally take to develop a user story. Becuase this
 1. Team asks clarifying questions
 1. They negotiate and converge on draft acceptance criteria.
    
-   Acceptance criteria are the business conditions that must be true when the story is successfully completed.
-   
-1. The user story card is extended with the draft acceptance criteria.
-
-   The criteria capture the business start state of the system and the end state. The detailed interactions in between are not included.
+   Acceptance criteria are the business conditions that must be true when the story is successfully completed. The criteria capture the business start state of the system and the end state. The detailed interactions in between are not included.
 
    ```A profile for the practice manager sufficient to authorize them exists.
-Permission to manage the practice has been granted and is visible.```
+      Permission to manage the practice has been granted and is visible.```
 
-1. The team “points” the user story using other stories as benchmarks.
-
+1. The team estimates the user story relative to other user stories.
    The story card is extended to show the results of the pointing exercise (median points).
-
-1. NOTE: A Definition of Done (DoD) document (checklist) exists that the team has created that it applies to all stories as they are developed.
-  1. 100% automated test coverage of all code we write.
-  1. Linters indicate zero problems.
-  1. User documentation is extended.
-  1. UAT is complete and passes all tests. All UAT tests have been automated.
-  1. All code is checked in.
-  1. Etc.....
   
 ### 3. Plan the hypothetical Sprint (Scrum Team).
 1. The PO goes through stories in value-flow rate order.
