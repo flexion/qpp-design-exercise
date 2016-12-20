@@ -1,7 +1,12 @@
 # qpp-design-exercise
-
+  * [Approach](aApproach)
   * [Design Process Steps](#design-process-steps)
   * [Installation](#installation)
+
+## Approach
+There were multiple options allowed for the response to this design exercise, from written documents to a fully working prototype and enything in between. We chose to build a clickable prototype using the web technoloies that those working on the exercise could deliver the fastest, with the rapid change cycles necessary to support a dybamic user feedback cycle. These techoligies include...
+
+This choice of technologies is not a recommentation for what we would use for the production QPP website. We are fully capable of using the technologoes that are already in place in the QPP product ecosystem.
 
 ## Design Process Steps
 Below are the steps we would normally take to develop a user story. Becuase this is a demo that does not include a full team, some of the steps are "fake", and just listed so you can see where they fall in the process. Links will take you to the artifacts that are associated with the step in the process.
