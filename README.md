@@ -1,5 +1,5 @@
 # qpp-design-exercise
-  * [Approach](aApproach)
+  * [Approach](approach)
   * [Design Process Steps](#design-process-steps)
   * [Installation](#installation)
 
@@ -91,6 +91,7 @@ The Sprint Review is the accountability ceremony, where the team demos anything 
 1. All system artifacts are turned over to the PO. (They are in GitHub.).
 
 1. A working version of the system is accessible to the PO.
+
 ## Installation
 ### Prerequisites
 Node 4 or higher, together with NPM 3 or higher.
