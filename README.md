@@ -7,9 +7,9 @@
 There were multiple options allowed for the response to this design exercise, from written documents to a fully working prototype and enything in between. We chose to build a clickable prototype using the web technoloies that those working on the exercise could deliver the fastest, with the rapid change cycles necessary to support a dynamic user feedback cycle. These techoligies include...
 
 ## Design Process Steps
-Below are the steps we would normally take to develop a user story. Becuase this is a demo that does not include a full team, some of the steps are "fake", and just listed so you can see where they fall in the process. Links will take you to the artifacts that are associated with the step in the process.
+Below are the steps we would normally take to develop a user story. Because this is a demo constructed in an abbreviated time frame that does not include a full team, some of the steps are "fake", and listed so you can see where they fall in the process. Links will take you to the artifacts that are associated with the step in the process.
 
-These represent the path a single user story will take through the iterative process, which is what we did for this design exercise.
+Also, each story goes through all of these process steps. The number of user stories that go through the cycle together is a function of the maturity of the Scrum teams. As we improve our processes, the size of a "batch" decreases while the value delivered each sprint increases.
 
 ### 1. Identify persona and epic or user story.
 
@@ -40,7 +40,7 @@ The purpose of refining the backlog is to subsume new PO goals into the backlog 
 
 1. **The team estimates the value-flow rate relative to other user stories.** Two components are inputs to value-flow rate; relative cost of delay (estimated by business) and relative duration (estimated by Scrum team).
    
-### 3. Plan the Sprint (Sprint Planning ceremony).
+### 3. Plan the Sprint.
 
 The purpose of Sprint Planning is to pull enough work into the next upcoming sprint to keep the team allocated but as focused as possible in their current state. The team drafts a plan for how to organize the work in the sprint. The granularity of atomic user stories for the Product Owner will likely require that they span multiple sprints, especially when UX research, testing, and deployment are included. So sprint planning is also where atomic PO user stories might be decomposed into smaller demonstrable user stories that can be ingested into the sprint.
 
@@ -82,15 +82,15 @@ This is the bulk of the two-week sprint where the development team develops. Thi
 
 1. The team works to account for all items in the story’s DoD Checklist.
 
-### 5. Sprint Review
+### 5. Review the Sprint
 
 The Sprint Review is the accountability ceremony, where the team demos anything that meets the Definition of Done by time this meeting takes place, or explains why things they expected to complete weren't. The PO accepts or rejects their work. The team also discusses why stories that they expected to complete aren't complete yet.(Hopefully, there have been enough regular interactions with the PO that the team already knows that the completed story will be accepted.)
 
-1. The team demos that the system meets the acceptance criteria and DoD for the story.
+1. **The team demos that the story.** The demo covers the acceptance criteria for the story and is only given for stories that meet a predefined subset of the Definition of Done.
 
-1. All system artifacts are turned over to the PO. (They are in GitHub.).
+1. **Hand over system artifacts.** In this case, all artifacts are committed or uploaded into GitHub to which the PO and government have access.
 
-1. A working version of the system is accessible to the PO.
+1. **A working version of the system is accessible to the PO.**
 
 ## Installation
 ### Prerequisites
