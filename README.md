@@ -1,11 +1,7 @@
 # qpp-design-exercise
 
   * [Design Process Steps](#design-process-steps)
-      * [1. Identify persona and epic or user story.](#1.-identify-persona-and-epic-or-user-story.)
-      * [2. Refine the Product Backlog (Scrum Team).](#2.-refine-the-product-backlog.)
-      * [3. Plan the Sprint (Sprint Planning ceremony).](#3.-plan-the-sprint.)
   * [Installation](#installation)
-
 
 ## Design Process Steps
 Below are the steps we would normally take to develop a user story. Becuase this is a demo that does not include a full team, some of the steps are "fake", and just listed so you can see where they fall in the process. Links will take you to the artifacts that are associated with the step in the process.
