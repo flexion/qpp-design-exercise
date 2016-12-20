@@ -1,5 +1,5 @@
 # qpp-design-exercise
-  * [Approach](approach)
+  * [Approach](#approach)
   * [Design Process Steps](#design-process-steps)
   * [Installation](#installation)
 
