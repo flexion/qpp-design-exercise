@@ -4,7 +4,7 @@
   * [Installation](#installation)
 
 ## Approach
-There ate multiple response options allowed for this design exercise, from written documents to a fully working prototype and enything in between. We chose to build a clickable prototype using the web technoloies that those working on the exercise could deliver the fastest, with the rapid change cycles necessary to support a dynamic user feedback cycle. These techoligies include...
+There are multiple response options allowed for this design exercise, from written documents to a fully working prototype and everything in between. We chose to build a clickable prototype using the web technologies that those working on the exercise could deliver the fastest, with the rapid change cycles necessary to support a dynamic user feedback cycle. These technologies include...
 
 ## Design Process Steps
 Below are the steps we would normally take to develop a user story. Because this is a demo constructed in an abbreviated time frame that does not include a full team, some of the steps are "fake", and listed so you can see where they fall in the process. Links will take you to the artifacts that are associated with the step in the process.
