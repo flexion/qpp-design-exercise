@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Authentication} from '../_services/authentication';
+import {User} from '../_models/user';
 
 @Component({
   selector: 'app-steps',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StepsComponent implements OnInit {
 
-  constructor() { }
+  currentUser: User;
+
+  constructor(private auth: Authentication) {
+  }
 
   ngOnInit() {
+    this.auth.currentUser.subscribe(
+        (user: User) => {
+          this.currentUser = user;
+        });
   }
 
 }

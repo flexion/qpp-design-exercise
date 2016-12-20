@@ -20,9 +20,17 @@
           <input id="click-verification" type="checkbox" onclick="this.checked=!this.checked;" checked>
           <label for="click-verification">Click the verification link</label>
         </li>
-        <li>
+        <li *ngIf="currentUser.step == 'profile'">
           <input id="complete-profile" type="checkbox" [routerLink]="['/profile']">
           <label for="complete-profile"><a [routerLink]="['/profile']">Complete profile</a></label>
+        </li>
+        <li *ngIf="currentUser.step == 'connect'">
+          <input id="complete-profile" type="checkbox" onclick="this.checked=!this.checked;" checked>
+          <label for="complete-profile">Complete profile</label>
+        </li>
+        <li *ngIf="currentUser.step == 'connect'">
+          <input id="connect-practices" type="checkbox" [routerLink]="['/practice']">
+          <label for="connect-practices"><a [routerLink]="['/practice']">Connect with Practices</a></label>
         </li>
       </ul>
     </div>
@@ -30,7 +38,9 @@
   <div class="button_wrapper">
     <!-- change button style based on what step user is in the process -->
     <button class="usa-button-outline-inverse usa-button-hover" disabled>Confirm Account</button>
-    <a class="usa-button usa-button-big" [routerLink]="['/profile']">Complete Profile</a>
-    <button class="usa-button-outline-inverse usa-button-hover"  [routerLink]="['/practice']">Connect with Practice</button>
+    <button [ngClass]="{'usa-button usa-button-big': currentUser.step === 'profile', 'usa-button-outline-inverse usa-button-hover': currentUser.step != 'profile'}"
+            [routerLink]="['/profile']"  [disabled]="!currentUser.step == 'profile'">Complete Profile</button>
+    <button [ngClass]="{'usa-button usa-button-big': currentUser.step === 'connect', 'usa-button-outline-inverse usa-button-hover': currentUser.step != 'connect'}"
+            [routerLink]="['/practice']"  [disabled]="!currentUser.step == 'connect'">Connect with Practice</button>
   </div>
 </section>
