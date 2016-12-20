@@ -1,9 +1,9 @@
 # qpp-design-exercise
 
   * [Design Process Steps](#design-process-steps)
-      * [1. Identify persona and epic or user story.](#1._identify_persona_and_epic_or_user_story.)
-      * [2. Refine the Product Backlog (Scrum Team).](#2._refine_the_product_backlog_(scrum_team).)
-      * [3. Plan the Sprint (Sprint Planning ceremony).](#3. Plan the Sprint (Sprint Planning ceremony).)
+      * [1. Identify persona and epic or user story.](#1.-identify-persona-and-epic-or-user-story.)
+      * [2. Refine the Product Backlog (Scrum Team).](#2.-refine-the-product-backlog.)
+      * [3. Plan the Sprint (Sprint Planning ceremony).](#3.-plan-the-sprint.)
   * [Installation](#installation)
 
 
@@ -24,7 +24,7 @@ The purpose of identifying personas and their epics and user stories is simply t
    As a Practice Manager, in order to manage my practice, I must be authorized to manage my practice.
    ```
 
-### 2. Refine the Product Backlog (Scrum Team).
+### 2. Refine the Product Backlog.
 
 The purpose of refining the backlog is to subsume new PO goals into the backlog with just enough detail to be able to prioritize it.
 
