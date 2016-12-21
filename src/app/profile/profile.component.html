@@ -37,7 +37,7 @@
           <span class="usa-form-hint" id="dobHint" class="usa-input-required">For example: 04 28 1986</span>
 
           <div class="usa-date-of-birth">
-            <span class="usa-input-error-message" role="alert" [hidden]="day.invalid || year.invalid || month.invalid" >Field is required</span>
+            <span class="usa-input-error-message" role="alert" *ngIf="day.invalid || year.invalid || month.invalid" >Field is required</span>
             <div class="usa-form-group usa-form-group-month">
               <label for="date_of_birth_1">Month</label>
               <input class="usa-input-inline" aria-describedby="dobHint" class="usa-form-control" id="date_of_birth_1"
