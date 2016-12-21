@@ -142,6 +142,7 @@ Webpack is used for building static assets. We are using Protractor for end-to-e
 ### File Structure
 The following lists our file structure. The main development files are located in src/app. Inside that folder lives sub-components, each relating to a specific function or process in the application.
 
+```
 qpp-design-exercise/
  ├──e2e/                       * End-2-end testing 
  |   ├──app.e2e-spec.ts
@@ -191,7 +192,7 @@ qpp-design-exercise/
  ├──karma.conf.js              * karma config
  ├──package.json               * npm package dependencies
  └──tslint.json                * typescript lint config
- 
+ ```
 
 ## Development Tasks
 
