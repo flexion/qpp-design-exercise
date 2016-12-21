@@ -14,7 +14,7 @@
       </button>
       <ul class="usa-nav-primary usa-accordion">
         <li>
-          <a class="usa-nav-link" [routerLink]="['/dashboard']">
+          <a class="usa-nav-link" routerLink="/dashboard">
             <span>Dashboard</span>
           </a>
         </li>
@@ -39,10 +39,10 @@
             <button class="usa-header-search-button js-search-button">Search</button>
           </li>
           <li>
-            <a *ngIf="(currentUser|async)" [routerLink]="['/profile']">Logged in as {{(currentUser|async).email}}</a>
-            <a *ngIf="!(currentUser|async)" [routerLink]="['/login']">Login</a>
+            <a *ngIf="(currentUser|async)" routerLink="/profile">Logged in as {{(currentUser|async).email}}</a>
+            <a *ngIf="!currentUser|async" routerLink="/login">Login</a>
           </li>
-          <li *ngIf="(currentUser|async)"><a [routerLink]="['/login']">Log Out</a></li>
+          <li *ngIf="currentUser|async"><a routerLink="/login">Log Out</a></li>
         </ul>
       </div>
     </div>

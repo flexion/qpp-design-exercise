@@ -12,13 +12,17 @@ module.exports = function (config) {
       require('angular-cli/plugins/karma')
     ],
     files: [
-      { pattern: './src/test.ts', watched: false }
+      {pattern: './src/test.ts', watched: false},
+      {pattern: './src/assets/**', watched: false, included: false, nocache: false, served: true}
     ],
+    proxies: {
+      '/assets': '/base/src/assets'
+    },
     preprocessors: {
       './src/test.ts': ['angular-cli']
     },
     mime: {
-      'text/x-typescript': ['ts','tsx']
+      'text/x-typescript': ['ts', 'tsx']
     },
     remapIstanbulReporter: {
       reports: {
@@ -31,13 +35,14 @@ module.exports = function (config) {
       environment: 'dev'
     },
     reporters: config.angularCli && config.angularCli.codeCoverage
-              ? ['progress', 'karma-remap-istanbul']
-              : ['progress'],
+      ? ['progress', 'karma-remap-istanbul']
+      : ['progress'],
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
-    autoWatch: true,
+    autoWatch: false,
     browsers: ['Chrome'],
-    singleRun: false
-  });
+    singleRun: true
+  })
+  ;
 };
