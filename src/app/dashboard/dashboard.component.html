@@ -7,16 +7,26 @@
       <p>{{(currentUser|async).address}}<br/>{{(currentUser|async).city}}, {{(currentUser|async).state}} {{(currentUser|async).zip}}</p>
       <button>Change Password</button>
       <button [routerLink]="['/profile']">Edit Profile</button>
-      <button [routerLink]="['/practice']">Manage Connections</button>
+      <button><a href="/dashboard#your-connections">Manage Connections</a></button>
+      <button><a href="/dashboard#your-users">Manage Users</a></button>
     </div>
   </div>
 
   <div class="usa-width-two-thirds">
-    <h2>Dashboard {{(currentUser|async).first_name}}</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-      exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.</p>
-    <h3>Your Practices</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt commodo consequat. Duis aute irure dolor in reprehenderit.</p>
+    <h2>Welcome, {{currentUser.first_name}}</h2>
+    <!-- only show this on first access -->
+    <div *ngIf="showFirstAccess">
+      <p>Thanks for joining the Quality Payment Program community!</p>
+      <p>Congratulations on completing your profile and connecting to a medical practice! You're well on your way to successfully using the Quality Payment Program system. We're glad to have you working with us in the quest to provide better care and smarter spending for a healthier America.</p>
+    </div>
+    <!-- end only show this on first access -->
+
+    <p>Be sure to check out our <a href="#">Help & Frequently Asked Questions</a> section to learn about the features and programs which will help you get the most out of your QPP experience.</p>
+
+    <h2>Your Dashboard</h2>
+
+    <h3 id="your-connections">Connections</h3>
+    <p>Need to check on the status of your request to connect to a medical practice? Look no further. Check below to see successfully connected practices and those you're still awaiting confirmation from.</p>
     <table class="usa-table-borderless">
       <thead>
       <tr>
@@ -42,8 +52,8 @@
     <a class="usa-button" [routerLink]="['/practice']">Connect To Practice</a>
     <hr/>
 
-    <h3>Your Surrogates</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt commodo consequat. Duis aute irure dolor in reprehenderit.</p>
+    <h3 id="your-users">Users</h3>
+    <p>Need to manage users that can act as a surrogate on behalf of you and the medical practice you manage quality submissions for? Look under Connections to see requests that you can approve or deny. If you need to revoke a user's access, you can also do that from this Dashboard.</p>
     <table class="usa-table-borderless">
       <thead>
       <tr>

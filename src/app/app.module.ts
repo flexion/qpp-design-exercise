@@ -29,7 +29,7 @@ const appRoutes: Routes = [
     {path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard]},
     {path: 'steps', component: StepsComponent, canActivate: [AuthGuard]},
     {path: 'practice', component: PracticeComponent, canActivate: [AuthGuard]},
-    {path: '**', redirectTo: 'profile'}
+    {path: '**', redirectTo: 'steps'}
 ];
 
 @NgModule({

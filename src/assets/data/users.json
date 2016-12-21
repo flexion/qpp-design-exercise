@@ -13,7 +13,8 @@
     "address": "",
     "city": "",
     "state": "",
-    "zip": ""
+    "zip": "",
+    "step": "profile"
   },
   {
     "id": 2,
@@ -30,7 +31,8 @@
     "company_title": "Director of Case Management",
     "birth_month": 5,
     "birth_day": 5,
-    "birth_year": 1981
+    "birth_year": 1981,
+    "step": "connect"
   },
   {
     "id": 1,
@@ -49,6 +51,7 @@
     "birth_month": 5,
     "birth_day": 5,
     "birth_year": 1981,
+    "step": "dashboard",
     "connections": [
       {
         "role": "0",

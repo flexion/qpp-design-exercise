@@ -17,6 +17,8 @@ export class DashboardComponent implements OnInit {
 
     roles: EmployeeRole;
     status: ConnectionStatus;
+    accessNumber = 1;
+    showFirstAccess = true;
 
     getRoleName(role) {
         return role ? EmployeeRole[role] : '';
@@ -31,6 +33,14 @@ export class DashboardComponent implements OnInit {
             (user: User) => {
                 console.log('dashboard user', user);
             });
+
+        if(this.accessNumber == 1){
+            this.showFirstAccess = true;
+            this.accessNumber = 2;
+        }else{
+            this.showFirstAccess = false;
+        }
+
     }
 
 }
