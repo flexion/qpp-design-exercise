@@ -85,9 +85,7 @@ This is the bulk of the two-week sprint where the development team develops. Thi
 
 1. The development team collaborates to fully build out the user story and its supporting unit tests. Implementation decouples design, style, and function to the greatest extent possible. We create a “Clean Architecture”.
 
-1. The user story is tested by real users who identified as users most likely to interact with the system. https://github.com/flexion/qpp-design-exercise/project_assets/user-research/QPPTest-Report.pdf. 
-Edited screen capture of user's major pain points: https://flexion.wistia.com/medias/hs5ka2xir6. 
-use password: cmsuser1, to access the video.
+1. The user story is validated by testing with real people who have been identified as likely prospective users of the system. https://github.com/flexion/qpp-design-exercise/project_assets/user-research/QPPTest-Report.pdf. You can view video snippets of several test users' major pain points by visiting: https://flexion.wistia.com/medias/hs5ka2xir6. A password is required to access the video: cmsuser1
 
 1. Recommendations from the user testing are placed into the project backlog for implementation in the application.
 
@@ -108,7 +106,7 @@ Visit and interact with the application at <insert github pages url here>
 
 For the purpose of this exercise, the application is pre-populated with test data. As a user you will complete the following steps:
 
-1. Begin at the landing page which includes a login form. Please login with email address: user@presencehealth.org, and password: password
+1. Begin at the landing page which includes a login form. Please login with the username: user@presencehealth.org and the password: password
 
 1. After successful login, you are redirected to a page outlining the steps that you have completed thus far, and the next step to take in the process. Click 'complete profile'
 
