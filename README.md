@@ -161,22 +161,22 @@ qpp-design-exercise/
  |   ├──tests.ts               
  |   ├──tsconfig.json
  │   │
- │   ├──app/                   * application files
- │   │   ├──app.component.html * header and main content wrapper
- │   │   ├──app.component.spec.ts  * tests for app.component
- │   │   ├──app.component.ts       * component logic
- │   │   ├──app.modules.ts         * include sub-modules
- |   |   ├──is-authenticated.ts    * user authentication check
- |   |   ├──_models/               * Data models
- |   |   ├──_services/             * Services
- |   |   ├──dashboard/             * Dashboard view, logic, testing
- |   |   ├──guard/                 * Authetication asset
- |   |   ├──login/                 * Login view, logic, testing
- |   |   ├──practice/              * Pactices view, logic, testing
- |   |   ├──profile/               * Profile view, logic, testing
- |   |   ├──registration/          * Registraiton view, logic, testing
- |   |   ├──steps/                 * User steps view, logic, testing
- |   |   ├──usa-official/          * Partial containing official usa website copy
+ │   ├──app/                         * application files
+ │   │   ├──app.component.html       * header and main content wrapper
+ │   │   ├──app.component.spec.ts    * tests for app.component
+ │   │   ├──app.component.ts         * component logic
+ │   │   ├──app.modules.ts           * include sub-modules
+ |   |   ├──is-authenticated.ts      * user authentication check
+ |   |   ├──_models/                 * Data models
+ |   |   ├──_services/               * Services
+ |   |   ├──dashboard/               * Dashboard view, logic, testing
+ |   |   ├──guard/                   * Authetication asset
+ |   |   ├──login/                   * Login view, logic, testing
+ |   |   ├──practice/                * Pactices view, logic, testing
+ |   |   ├──profile/                 * Profile view, logic, testing
+ |   |   ├──registration/            * Registraiton view, logic, testing
+ |   |   ├──steps/                   * User steps view, logic, testing
+ |   |   ├──usa-official/            * Partial containing official usa website copy
  │   │
  │   └──assets/                * static assets are served here
  │       ├──css/               * CSS generated from SASS
