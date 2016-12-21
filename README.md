@@ -65,7 +65,7 @@ The purpose of Sprint Planning is to pull enough work into the next upcoming spr
    5. User verifies that they have been authorized to manage the practice.
    ```
 
-   These tasks or goals serve as candidate child stories should it be determined that the parent story is too large.
+   These tasks or goals also serve as candidate child stories should it be determined that the parent story is too large.
 
 1. **The Scrum team drafts a [cross-functional task list] (https://github.com/flexion/qpp-design-exercise/projects/1) required to get the story to done.** The list includes *all* tasks from UX research to coding to testing to deployment. These tasks are just abstract enough to avoid becoming obsolete once related details of the work start to take shape.
 
