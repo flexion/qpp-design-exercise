@@ -86,7 +86,8 @@ This is the bulk of the two-week sprint where the development team develops. Thi
 1. The development team collaborates to fully build out the user story and its supporting unit tests. Implementation decouples design, style, and function to the greatest extent possible. We create a “Clean Architecture”.
 
 1. The user story is tested by real users who identified as users most likely to interact with the system. https://github.com/flexion/qpp-design-exercise/project_assets/user-research/QPPTest-Report.pdf
-Edited screen capture of user's major pain points: https://flexion.wistia.com/medias/hs5ka2xir6, use password: cmsuser1, to access the video.
+Edited screen capture of user's major pain points: https://flexion.wistia.com/medias/hs5ka2xir6. 
+use password: cmsuser1, to access the video.
 
 1. Recommendations from the user testing are placed into the project backlog for implementation in the application.
 
