@@ -25,6 +25,10 @@ export class DashboardComponent implements OnInit {
         return role ? EmployeeRole[role] : '';
     }
 
+    getConnectionStatus(status){
+        return status ? ConnectionStatus[status] : 'pending';
+    }
+
     constructor(private auth: Authentication,
                 private usersService: UsersService) {
     }

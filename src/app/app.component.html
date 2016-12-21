@@ -40,9 +40,9 @@
           </li>
           <li>
             <a *ngIf="(currentUser|async)" [routerLink]="['/profile']">Logged in as {{(currentUser|async).email}}</a>
-            <a *ngIf="!currentUser" [routerLink]="['/login']">Login</a>
+            <a *ngIf="!(currentUser|async)" [routerLink]="['/login']">Login</a>
           </li>
-          <li *ngIf="currentUser"><a [routerLink]="['/login']">Log Out</a></li>
+          <li *ngIf="(currentUser|async)"><a [routerLink]="['/login']">Log Out</a></li>
         </ul>
       </div>
     </div>

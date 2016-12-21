@@ -53,9 +53,9 @@
         <td>{{connection.provider.npi}}</td>
         <td>{{getRoleName(connection.role)}}</td>
         <td><span class="usa-color-text"
-                  [ngClass]="{'usa-color-text-primary': connection.status === 'approved',
-                  'usa-color-text-secondary-dark': connection.status ==='pending'}">
-          Pending</span>
+                  [ngClass]="{'usa-color-text-green': connection.status === 1,
+                  'usa-color-text-secondary-dark': connection.status != 1}">
+          {{getConnectionStatus(connection.status)}}</span>
         </td>
       </tr>
       </tbody>

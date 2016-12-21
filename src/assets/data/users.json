@@ -14,7 +14,18 @@
     "city": "",
     "state": "",
     "zip": "",
-    "step": "profile"
+    "step": "profile",
+    "connections": [
+      {
+        "role": "1",
+        "provider": {
+          "id": 19,
+          "name": "Presence Holy Family Medical Center",
+          "npi": "32234234"
+        },
+        "status": 1
+      }
+    ]
   },
   {
     "id": 2,
@@ -54,7 +65,7 @@
     "step": "dashboard",
     "connections": [
       {
-        "role": "0",
+        "role": "1",
         "provider": {
           "id": 19,
           "name": "practice 1",
