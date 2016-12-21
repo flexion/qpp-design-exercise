@@ -7,9 +7,9 @@
 There are multiple response options allowed for this design exercise, from written documents to a fully working prototype and everything in between. We chose to build a clickable prototype using the web technologies that those working on the exercise could deliver the fastest, with the rapid change cycles necessary to support a dynamic user feedback cycle. These technologies include...
 
 ## Design Process Steps
-Below are the steps we would normally take to develop a user story. Because this is a demo constructed in an abbreviated time frame that does not include a full team, some of the steps are "fake", and listed so you can see where they fall in the process. Links will take you to the artifacts that are associated with the step in the process.
+Below are the steps we would normally take to develop a user story. Because this is a demo constructed in an abbreviated time frame by a partial team, some of the steps are "stubs", listed so you can see where they fall in the process. Links will take you to the artifacts that are associated with the step in the process.
 
-Also, each story goes through all of these process steps. The number of user stories that go through the cycle together is a function of the maturity of the Scrum teams. As we improve our processes, the size of a "batch" decreases while the value delivered each sprint increases.
+Also, each story goes through all of these process steps. The number of user stories that go through the cycle together is a function of the maturity of the Scrum team. As we improve our processes, the size of each "batch" decreases while the value delivered each sprint increases.
 
 ### 1. Identify persona and epic or user story.
 
@@ -54,13 +54,18 @@ The purpose of Sprint Planning is to pull enough work into the next upcoming spr
 
 1. **The team crafts a Sprint Goal.** The sprint goal is a unifying goal that binds together all user stories accepted into the sprint.
 
-1. **The team whiteboards a static user task list.** This exercise used to subsume the user story into the system that aligns with the system’s metaphor and general UX tenets and guidelines. For example:
+1. **The team whiteboards a static user task list.** This exercise used to think about the logical steps to achieve the goal of the story. Thinking through these steps helps the team subsume the user story into the system and consider how to implement them in a manner consistedn with the system’s metaphor and general UX tenets and guidelines. For example:
 
-  1. User completes profile.
-  1. User verifies that profile correct.
-  1. User finds their practice.
-  1. User submits their profile to manage the practice. (Time elapses.)
-  1. User can see that they have been authorized to manage the practice.
+   ```
+   1. User completes profile.
+   2. User verifies profile.
+   3. User finds their practice.
+   4. User submits their profile to manage the practice.
+   ...
+   5. User verifies that they have been authorized to manage the practice.
+   ```
+
+   These tasks or goals serve as candidate child stories should it be determined that the parent story is too large.
 
 1. **The Scrum team drafts a [cross-functional task list] (https://github.com/flexion/qpp-design-exercise/projects/1) required to get the story to done.** The list includes *all* tasks from UX research to coding to testing to deployment. These tasks are just abstract enough to avoid becoming obsolete once related details of the work start to take shape.
 
