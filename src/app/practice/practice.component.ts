@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {Practice} from '../_models/practice';
+import {Provider} from '../_models/provider';
 import {PracticesService} from '../_services/practices.service';
+import {SurrogateFunction} from '../_models/surrogate';
+import {Observable} from 'rxjs';
 
 @Component({
     selector: 'app-practice',
@@ -9,32 +11,28 @@ import {PracticesService} from '../_services/practices.service';
 })
 export class PracticeComponent implements OnInit {
 
-    search = false;
     connected = false;
-    practices;
-    practicesService: PracticesService;
+    providers; // Observable<Provider>;
 
-    searched() {
-        this.search = true;
+    model = {
+        query: ''
+    };
+
+    search() {
+        console.log(this.model.query);
+        this.practicesService.getPractices()
+            .subscribe(providers => this.providers = providers);
     }
 
     connect() {
         this.connected = true;
     }
 
-    constructor(practicesService: PracticesService) {
-        this.practicesService = practicesService;
+    constructor(private practicesService: PracticesService) {
     }
 
     ngOnInit() {
-        this.practicesService.getPractices()
-            .subscribe(
-                practices => {
-                    this.practices = practices;
-                    console.log('practices received', practices);
-                },
-                error => console.log('error fetching practices')
-            );
     }
+
 
 }

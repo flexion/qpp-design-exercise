@@ -18,6 +18,9 @@ import {PracticeComponent} from './practice/practice.component';
 import {PracticesService} from './_services/practices.service';
 import {fakeBackendProvider} from './_services/fake-backend';
 import {UsersService} from './_services/users.service';
+import { ProviderConnectionComponent } from './provider-connection/provider-connection.component';
+import {ProviderSearchListComponent} from './provider-connection/provider-search-list';
+import {ConnectionsService} from './_services/connections.service';
 
 const appRoutes: Routes = [
     {path: 'login', component: LoginComponent},
@@ -39,6 +42,8 @@ const appRoutes: Routes = [
         DashboardComponent,
         StepsComponent,
         PracticeComponent,
+        ProviderConnectionComponent,
+        ProviderSearchListComponent
     ],
     imports: [
         BrowserModule,
@@ -49,6 +54,7 @@ const appRoutes: Routes = [
     providers: [
         Authentication,
         UsersService,
+        ConnectionsService,
         PracticesService,
         AuthGuard,
         PracticesService,

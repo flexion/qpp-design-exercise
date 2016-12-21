@@ -1,0 +1,11 @@
+<tr ngForm="connectForm" #connectForm="ngForm">
+  <th scope="row">{{provider.name}}</th>
+  <td>{{provider.npi}}</td>
+  <td>
+    <select name="user-roles" id="user-role" [(ngModel)]="model.role">
+      <option *ngFor="let role of roles" [value]="rolesEnum[role]">{{role}}</option>
+    </select>
+  </td>
+
+  <td><a class="usa-button" (click)="connect(provider, model.role)">Connect</a></td>
+</tr>

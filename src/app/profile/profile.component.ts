@@ -24,19 +24,19 @@ export class ProfileComponent implements OnInit {
 
 
     onSubmit() {
-        //if submitting profile for the first time, redirect back to the steps page.
-        if(this.user.step == 'profile'){
+        // if submitting profile for the first time, redirect back to the steps page.
+        if (this.user.step === 'profile') {
             this.user.step = 'connect';
             this.redirect = '/steps';
-        //Otherwise redirect to the dashboard.
-        }else{
+            // Otherwise redirect to the dashboard.
+        } else {
             this.redirect = '/dashboard';
         }
         this.usersService.updateUser(this.user)
             .subscribe(
                 () => {
                     console.log('success');
-                    //this.router.navigate(['/dashboard']);
+                    // this.router.navigate(['/dashboard']);
                     this.router.navigate([this.redirect]);
                 },
                 (e: any) => this.error = 'Error updating'

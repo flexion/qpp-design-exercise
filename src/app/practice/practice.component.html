@@ -4,49 +4,28 @@
     <div class="usa-alert-body">
       <h3 class="usa-alert-heading">Your Connection Request in in process.</h3>
       <p class="usa-alert-text">All requests must be approved by the practice. This usually takes 1-3 business days.</p>
-      <p class="usa-alert-text">In the meantime, you can request to connect to any additional practices you need access to, or return to the <a [routerLink]="['/dashboard']">dashboard</a>.</p>
+      <p class="usa-alert-text">In the meantime, you can request to connect to any additional practices you need access to, or return to the <a [routerLink]="['/dashboard']">dashboard</a>.
+      </p>
     </div>
   </div>
   <h2>Connect to practice</h2>
   <p>Enter the name or NPI of the practice you would like to connect to and click "search"</p>
   <p>Don't see the practice you're searching for? Contact <a href="#">Practice Registrar Email</a> or call 1-800-NNN-NNNN for assistance.</p>
   <p>Your request will be in a "pending" state until it is approved by the practice.</p>
-  <hr />
+  <hr/>
   <div class="usa-grid">
     <h6>Practice name or NPI</h6>
     <div class="usa-width-one-half">
       <form class="usa-search usa-search-big">
         <div role="search">
           <label class="usa-sr-only" for="search-field-big">practice name or NPI</label>
-          <input id="search-field-big" type="search" name="search">
-          <button type="submit" (click)="searched()">
+          <input id="search-field-big" type="search" name="search" [(ngModel)]="model.query">
+          <button type="submit" (click)="search()">
             <span class="usa-search-submit-text">Search</span>
           </button>
         </div>
       </form>
     </div>
   </div>
-  <table class="usa-table-borderless" *ngIf="search">
-    <thead>
-    <tr>
-      <th scope="col">Practice</th>
-      <th scope="col">NPI</th>
-      <th scope="col">Your Role</th>
-      <th scope="col">Connect</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr  *ngFor="let practice of practices">
-      <th scope="row">{{practice.name}}</th>
-      <td>{{practice.npi}}</td>
-      <td>
-        <select name="user-types" id="user-types">
-          <option value="authorized-official">Authorized Official</option>
-          <option value="surrogate">Surrogate</option>
-        </select>
-      </td>
-      <td><a class="usa-button" (click)="connect()">Connect</a></td>
-    </tr>
-    </tbody>
-  </table>
+  <app-provider-search-list [providers]="providers"></app-provider-search-list>
 </section>

@@ -1,9 +1,10 @@
 import {Component, OnInit} from '@angular/core';
 
-import {Practice} from '../_models/practice';
+import {Provider} from '../_models/provider';
 import {Authentication} from '../_services/authentication';
-import {PracticesService} from '../_services/practices.service';
 import {User} from '../_models/user';
+import {EmployeeRole, ConnectionStatus} from '../_models/surrogate';
+import {Subscribable} from 'rxjs/Observable';
 
 @Component({
     selector: 'app-dashboard',
@@ -12,25 +13,24 @@ import {User} from '../_models/user';
 })
 export class DashboardComponent implements OnInit {
 
-    currentUser: User;
-    practices;
-    /*
-    practices = [
-        new Practice(18, 'practice 2', '32234234234', 'pending'),
-        new Practice(19, 'practice 3', '32234234234', 'approved'),
-    ];
-    */
+    currentUser: Subscribable<User>;
 
-    constructor(private auth: Authentication,
-                private practicesService: PracticesService) {
+    roles: EmployeeRole;
+    status: ConnectionStatus;
+
+    getRoleName(role) {
+        return role ? EmployeeRole[role] : '';
+    }
+
+    constructor(private auth: Authentication) {
     }
 
     ngOnInit() {
+        this.currentUser = this.auth.currentUser;
         this.auth.currentUser.subscribe(
             (user: User) => {
-                this.currentUser = user;
+                console.log('dashboard user', user);
             });
-        this.practices = this.practicesService.getPractices();
     }
 
 }

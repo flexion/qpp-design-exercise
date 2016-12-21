@@ -1,0 +1,12 @@
+<table class="usa-table-borderless">
+  <thead>
+  <tr>
+    <th scope="col">Practice</th>
+    <th scope="col">NPI</th>
+    <th scope="col">Your Role</th>
+    <th scope="col">Connect</th>
+  </tr>
+  </thead>
+  <tbody app-provider-connection *ngFor="let provider of providers" [provider]="provider">
+  </tbody>
+</table>

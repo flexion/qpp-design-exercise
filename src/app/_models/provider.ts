@@ -1,4 +1,4 @@
-export class Practice {
+export class Provider {
     constructor(public id: number,
                 public name: string,
                 public npi: string,

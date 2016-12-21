@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {Http, Response} from '@angular/http';
-import {Practice} from '../_models/practice';
+import {Provider} from '../_models/provider';
 import {Observable} from 'rxjs';
 
 @Injectable()
@@ -14,7 +14,7 @@ export class PracticesService {
         console.log('practices constructor');
     }
 
-    getPractices(): Observable<Practice[]> {
+    getPractices(): Observable<Provider[]> {
         return this.http.get('/api/practices')
             .map((res: Response) => res.json())
             .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
@@ -39,7 +39,7 @@ export class PracticesService {
     // reassignment sub-file
     // https://data.cms.gov/resource/94dn-q7c9.json
 
-    savePractice(practice: Practice) {
+    savePractice(provider: Provider) {
     }
 
 

@@ -12,6 +12,14 @@ export class Authentication {
 
     constructor(private http: Http) {
         this.currentUser.next(JSON.parse(localStorage.getItem('currentUser')));
+        this.currentUser.subscribe((user: User) => console.log('updating user', user));
+    }
+
+    update(data) {
+        console.log('circular', data);
+        let updated = Object.assign({}, this.currentUser.getValue(), data);
+        localStorage.setItem('currentUser', JSON.stringify(updated));
+        this.currentUser.next(updated);
     }
 
     login(email: string, password: string): Observable<User> {
