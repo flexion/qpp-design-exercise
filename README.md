@@ -99,17 +99,103 @@ The Sprint Review is the accountability ceremony, where the team demos anything 
 
 1. **A working version of the system is accessible to the PO.**
 
-## Installation
+## User Instructions
+Visit and interact with the application at <insert github pages url here> 
+
+For the purpose of this exercise, the application is pre-populated with test data. As a user you will complete the following steps:
+
+1. Begin at the landing page which includes a login form. Please login with email address: user@presencehealth.org, and password: password
+
+1. After successful login, you are redirected to a page outlining the steps that you have completed thus far, and the next step to take in the process. Click 'complete profile'
+
+1. You are taken to a profile form. Fill out the profile form and after all required fields are filled in, click 'Submit'
+
+1. You are taken back to the page outlining the steps in the process. It now shows the next actionable step "connect with practice"
+
+1. Clicking "connect to practice" takes you to a page asking you to search for a practice. Because we are using test data, you can enter anything into the search input and clikc 'Search'
+
+1. Hypothetical search results are returned. Next to one of the practices, choose which role you would like to connect to the practice as and click 'connect'
+
+1. You will see a message containing your next steps. You can either continue connecting to practices or visit your dashboard.
+
+1. On your dashboard, you will see all of your pending and approved practice connections as well as your pending and approved surrogates, with the ability to approve, deny, or revoke access on each surrogate.
+
+## Developer Installation Instructions
 ### Prerequisites
-Node 4 or higher, together with NPM 3 or higher.
+The following must be installed on your computer
+Node 4 or higher https://nodejs.org/en/, together with NPM 3 or higher https://www.npmjs.com/, and Angular CLI https://cli.angular.io/
+
+### Clone Project
+git clone https://github.com/flexion/qpp-design-exercise.git qpp-design-exercise
 
 ### Installation
-Install project dependencies with `npm install`. 
+From the command line, navigate to the project root and install project dependencies with `npm install`. 
 
-### Development server
+### Deploy on development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-### Code scaffolding
+## Development Instructions
+The application is built with the javascript framework Angular 2, and was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.22-1. 
+
+Webpack is used for building static assets. We are using Protractor for end-to-end tests, and Karma for unit tests. CSS is compiled from SASS
+
+### File Structure
+The following lists our file structure. The main development files are located in src/app. Inside that folder lives sub-components, each relating to a specific function or process in the application.
+
+qpp-design-exercise/
+ ├──e2e/                       * End-2-end testing 
+ |   ├──app.e2e-spec.ts
+ |   ├──app.po.ts         
+ │   └──tsconfig.json        
+ │
+ ├──project_assets/  
+ |   ├──design-deliverables/    * Mockups, wireframes, static html 
+ |   ├──user-research/          * User research documentation 
+ │   │
+ |
+ ├──src/                       * our source files that will be compiled to javascript
+ |   ├──index.html             * index page
+ |   ├──main.ts                * Entry file for browser environment 
+ |   ├──polyfills.ts           * our polyfills file
+ |   ├──tests.ts               
+ |   ├──tsconfig.json
+ │   │
+ │   ├──app/                   * application files
+ │   │   ├──app.component.html * header and main content wrapper
+ │   │   ├──app.component.spec.ts  * tests for app.component
+ │   │   ├──app.component.ts       * component logic
+ │   │   ├──app.modules.ts         * include sub-modules
+ |   |   ├──is-authenticated.ts    * user authentication check
+ |   |   ├──_models/               * Data models
+ |   |   ├──_services/             * Services
+ |   |   ├──dashboard/             * Dashboard view, logic, testing
+ |   |   ├──guard/                 * Authetication asset
+ |   |   ├──login/                 * Login view, logic, testing
+ |   |   ├──practice/              * Pactices view, logic, testing
+ |   |   ├──profile/               * Profile view, logic, testing
+ |   |   ├──registration/          * Registraiton view, logic, testing
+ |   |   ├──steps/                 * User steps view, logic, testing
+ |   |   ├──usa-official/          * Partial containing official usa website copy
+ │   │
+ │   └──assets/                * static assets are served here
+ │       ├──css/               * CSS generated from SASS
+ │       ├──data/              * test data json files 
+ │       ├──fonts/             * uswds fonts 
+ │       ├──img/               * image assets  
+ │       ├──js/                * uswds javascript
+ │       └──sass/              * sass file importing uswds assets
+ │
+ │
+ ├──angulars-cli.json          * angular cli config
+ ├──protractor.conf.js         * protractor config
+ ├──karma.conf.js              * karma config
+ ├──package.json               * npm package dependencies
+ └──tslint.json                * typescript lint config
+ 
+
+## Development Tasks
+
+### Generate new componenets
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
 
@@ -131,7 +217,5 @@ Before running the tests make sure you are serving the app via `ng serve`.
 Run `ng github-pages:deploy` to deploy to Github Pages.
 
 ### Further help
-
-This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.22-1.
 
 To get more help on the `angular-cli` use `ng help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
