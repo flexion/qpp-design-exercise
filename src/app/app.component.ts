@@ -2,6 +2,7 @@ import {Component, OnInit, Injectable} from '@angular/core';
 import {Authentication} from './_services/authentication';
 import {User} from './_models/user';
 import {Subscriber} from 'rxjs';
+import {Router} from '@angular/router';
 
 @Component({
     selector: 'app-root',
@@ -13,7 +14,7 @@ export class AppComponent implements OnInit {
     title = 'app works!';
     currentUser: any;
 
-    constructor(private authentication: Authentication) {
+    constructor(private authentication: Authentication, private router: Router) {
     }
 
     ngOnInit() {
