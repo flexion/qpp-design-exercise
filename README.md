@@ -73,17 +73,19 @@ The purpose of Sprint Planning is to pull enough work into the next upcoming spr
 
 This is the bulk of the two-week sprint where the development team develops. This includes identifying and evaluating options, developing them, testing them, and completing all tasks in the Definition of Done.
 
-**Seth. Please add all of your coarse-grained steps below. Overwrite anything I have that doesn't apply. Link to the artifacts that you created that are associated with each step, like I did above.**
+1. UX designer(s) perform the initial UX tasks (collaborate with user and FE Dev) to develop low-fidelity static design options resulting in wireframes illustrating the steps a user would take to complete the task. https://github.com/flexion/qpp-design-exercise/blob/master/project_assets/design-deliverables/wireframes/QPP-wireframes.pdf
 
-1. UX designer(s) perform the initial UX tasks (collaborate with user and FE Dev) to develop low-fidelity static design options resulting in whiteboard photos of low-fidelity options.
+1. FE Dev to create static (shallow working click-through) options in html/css (collaborate with user and UX designer). https://github.com/flexion/qpp-design-exercise/tree/master/project_assets/design-deliverables/Round%201
 
-1. FE Dev to create dynamic (shallow working) options in html/css (collaborate with user and UX designer).
+1. Review of the static click-through by user, UX designer and FE Dev providing comments and suggestions for improvement. https://github.com/flexion/qpp-design-exercise/blob/master/project_assets/design-deliverables/Round%201/team-feedback/QPP-RD1-comments.pdf
 
-1. The PO and user select which option to pursue.
+1. FE Dev and UX Designer collaborate to implement changes inspired by feedback. https://github.com/flexion/qpp-design-exercise/tree/master/project_assets/design-deliverables/Round%202
 
 1. Automated tests (ATDD/BDD) are written to capture the expected behavior, and integrated with the CI/CD pipeline.
 
 1. The development team collaborates to fully build out the user story and its supporting unit tests. Implementation decouples design, style, and function to the greatest extent possible. We create a “Clean Architecture”.
+
+1. The user story is tested by real users who identified as users most likely to interact with the system. Results from the user testing is implemented into the application.
 
 1. The team works to account for all items in the story’s DoD Checklist.
 
