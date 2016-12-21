@@ -3,6 +3,7 @@ import {Component, OnInit} from '@angular/core';
 import {Provider} from '../_models/provider';
 import {Authentication} from '../_services/authentication';
 import {User} from '../_models/user';
+import {UsersService} from '../_services/users.service';
 import {EmployeeRole, ConnectionStatus} from '../_models/surrogate';
 import {Subscribable} from 'rxjs/Observable';
 
@@ -15,32 +16,37 @@ export class DashboardComponent implements OnInit {
 
     currentUser: Subscribable<User>;
 
+  //  currentUser: User;
     roles: EmployeeRole;
+    error: string;
     status: ConnectionStatus;
-    accessNumber = 1;
-    showFirstAccess = true;
 
     getRoleName(role) {
         return role ? EmployeeRole[role] : '';
-      // return role;
     }
 
-    constructor(private auth: Authentication) {
+    constructor(private auth: Authentication,
+                private usersService: UsersService) {
     }
 
     ngOnInit() {
         this.currentUser = this.auth.currentUser;
+
         this.auth.currentUser.subscribe(
             (user: User) => {
+                if(!user.dashboard_landings){
+                    user.dashboard_landings = 0;
+                }
+                user.dashboard_landings += 1;
+                this.usersService.updateUser(user)
+                    .subscribe(
+                        () => {
+                            console.log('success');
+                        },
+                        (e: any) => this.error = 'Error updating'
+                    );
                 console.log('dashboard user', user);
             });
-
-        if(this.accessNumber == 1){
-            this.showFirstAccess = true;
-            this.accessNumber = 2;
-        }else{
-            this.showFirstAccess = false;
-        }
 
     }
 

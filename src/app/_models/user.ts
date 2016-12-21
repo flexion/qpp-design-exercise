@@ -19,6 +19,7 @@ export class User {
     state: string;
     zip: string;
     step: string;
+    dashboard_landings: number;
     connections: Connection[];
 
     constructor(values: Object = {}) {
