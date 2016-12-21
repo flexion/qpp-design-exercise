@@ -73,7 +73,7 @@ The purpose of Sprint Planning is to pull enough work into the next upcoming spr
 
 This is the bulk of the two-week sprint where the development team develops. This includes identifying and evaluating options, developing them, testing them, and completing all tasks in the Definition of Done.
 
-1. UX designer(s) perform the initial UX tasks (collaborate with user and FE Dev) to develop low-fidelity static design options resulting in wireframes illustrating the steps a user would take to complete the task. https://github.com/flexion/qpp-design-exercise/blob/master/project_assets/design-deliverables/wireframes/QPP-wireframes.pdf
+1. UX designer(s) perform the initial UX tasks (collaborate with user and FE Dev) to develop low-fidelity static design options resulting in wireframes and a user flow, illustrating the steps a user would take to complete the task. https://github.com/flexion/qpp-design-exercise/blob/master/project_assets/design-deliverables/wireframes/QPP-wireframes.pdf
 
 1. FE Dev to create static (shallow working click-through) options in html/css (collaborate with user and UX designer). https://github.com/flexion/qpp-design-exercise/tree/master/project_assets/design-deliverables/Round%201
 
@@ -85,7 +85,9 @@ This is the bulk of the two-week sprint where the development team develops. Thi
 
 1. The development team collaborates to fully build out the user story and its supporting unit tests. Implementation decouples design, style, and function to the greatest extent possible. We create a “Clean Architecture”.
 
-1. The user story is tested by real users who identified as users most likely to interact with the system. Results from the user testing is implemented into the application.
+1. The user story is tested by real users who identified as users most likely to interact with the system. https://github.com/flexion/qpp-design-exercise/project_assets/user-research/QPPTest-Report.pdf
+
+1. Recommendations from the user testing are placed into the project backlog for implementation in the application.
 
 1. The team works to account for all items in the story’s DoD Checklist.
 
@@ -112,11 +114,11 @@ For the purpose of this exercise, the application is pre-populated with test dat
 
 1. You are taken back to the page outlining the steps in the process. It now shows the next actionable step "connect with practice"
 
-1. Clicking "connect to practice" takes you to a page asking you to search for a practice. Because we are using test data, you can enter anything into the search input and clikc 'Search'
+1. Clicking "connect to practice" takes you to a page asking you to search for a practice. Because we have pre-populated the test data, you can enter anything into the search input and click 'Search'
 
 1. Hypothetical search results are returned. Next to one of the practices, choose which role you would like to connect to the practice as and click 'connect'
 
-1. You will see a message containing your next steps. You can either continue connecting to practices or visit your dashboard.
+1. You will be redirected to your Dashboard and see a success message with any next steps.
 
 1. On your dashboard, you will see all of your pending and approved practice connections as well as your pending and approved surrogates, with the ability to approve, deny, or revoke access on each surrogate.
 
