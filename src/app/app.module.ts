@@ -21,6 +21,8 @@ import {UsersService} from './_services/users.service';
 import { ProviderConnectionComponent } from './provider-connection/provider-connection.component';
 import {ProviderSearchListComponent} from './provider-connection/provider-search-list';
 import {ConnectionsService} from './_services/connections.service';
+import {ProviderConnectionRoleComponent} from './provider-connection/provider-connection-role';
+import {AppRoutingModule} from './app-routing.module';
 
 const appRoutes: Routes = [
     {path: '', component: LoginComponent},
@@ -44,13 +46,15 @@ const appRoutes: Routes = [
         StepsComponent,
         PracticeComponent,
         ProviderConnectionComponent,
-        ProviderSearchListComponent
+        ProviderSearchListComponent,
+        ProviderConnectionRoleComponent
     ],
     imports: [
         BrowserModule,
         FormsModule,
         HttpModule,
-        RouterModule.forRoot(appRoutes)
+//        RouterModule.forRoot(appRoutes)
+        AppRoutingModule
     ],
     providers: [
         Authentication,

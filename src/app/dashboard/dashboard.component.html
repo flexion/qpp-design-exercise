@@ -6,14 +6,11 @@
       <hr/>
       <p>{{(currentUser|async).address}}<br/>{{(currentUser|async).city}}, {{(currentUser|async).state}} {{(currentUser|async).zip}}</p>
       <button>Change Password</button>
-      <button [routerLink]="['/profile']">Edit Profile</button>
+      <button routerLink="/profile">Edit Profile</button>
       <button><a class="usa-color-text-white text-decoration-none" href="/dashboard#your-connections">Manage Connections</a></button>
       <button><a class="usa-color-text-white text-decoration-none" href="/dashboard#your-users">Manage Users</a></button>
     </div>
   </div>
-
-
-
 
   <div class="usa-width-two-thirds">
     <div class="usa-alert usa-alert-success" *ngIf="(currentUser|async).connections != 0">
@@ -60,7 +57,7 @@
       </tr>
       </tbody>
     </table>
-    <a class="usa-button" [routerLink]="['/practice']">Request to Connect to Practice</a>
+    <a class="usa-button" routerLink="/practice">Request To Connect To Practice</a>
     <hr/>
 
     <h3 id="your-users">Users</h3>

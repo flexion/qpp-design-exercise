@@ -22,7 +22,7 @@ export class PracticesService {
 
     // Base Provider Enrollment File
     searchNPI(npi: string) {
-        http.get('https://data.cms.gov/resource/7b6b-dk5v.json?npi=1023041159');
+        this.http.get('https://data.cms.gov/resource/7b6b-dk5v.json?npi=1023041159');
         /*
          {
          "enrlmt_id": "O20031105000244",

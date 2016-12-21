@@ -10,7 +10,6 @@ export class UsaOfficalComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-      console.log('hi');
   }
 
 }
