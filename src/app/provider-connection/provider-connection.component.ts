@@ -19,9 +19,8 @@ export class ProviderConnectionComponent implements OnInit {
     provider: Provider;
     user: User;
     connection: Connection;
-    connected = false;
 
-    roles = ['', 'Authorized Official', 'Surrogate'];
+    roles = ['- Choose Role -', 'Authorized Official', 'Surrogate'];
     rolesEnum = EmployeeRole;
 
     model: any = {

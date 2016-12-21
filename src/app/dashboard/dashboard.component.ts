@@ -22,6 +22,7 @@ export class DashboardComponent implements OnInit {
 
     getRoleName(role) {
         return role ? EmployeeRole[role] : '';
+      // return role;
     }
 
     constructor(private auth: Authentication) {

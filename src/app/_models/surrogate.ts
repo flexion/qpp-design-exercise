@@ -31,8 +31,8 @@ export enum SurrogateFunction {
 }
 
 export enum EmployeeRole {
+    '- Choose Role -',
     'Authorized Official',
-    'Delegated Official',
-    'Staff End User'
+    'Surrogate'
 }
 
