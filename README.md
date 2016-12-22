@@ -110,7 +110,7 @@ This is the bulk of the two-week sprint where the development team develops. Thi
 
 1. **Implement [improvements from feedback](https://github.com/flexion/qpp-design-exercise/tree/master/project_assets/design-deliverables/Round%202).** The Front-End Developer and UX Designer make improvements to the static click-through based on the comments and suggestions received in the previous step.
 
-1. **Create automated ATDD/BDD tests from the static click-through.** These tests drive production development and are integrated into the CI/CD pipeline.
+1. **Create [automated ATDD/BDD tests](https://github.com/flexion/qpp-design-exercise/blob/master/project_assets/design-deliverables/e2e.pdf) from the static click-through.** These tests drive production development and are integrated into the CI/CD pipeline.
 
 1. **The development team collaborates to fully build out the user story and its supporting unit tests.** Implementation decouples design, style, and function to the greatest extent possible. We create a “Clean Architecture.”
 
