@@ -18,7 +18,7 @@ const appRoutes: Routes = [
     {path: 'steps', component: StepsComponent, canActivate: [AuthGuard]},
     {path: 'practice', component: PracticeComponent, canActivate: [AuthGuard]},
     {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
-    {path: '*', redirectTo: 'dashboard'}
+    {path: '*', redirectTo: 'login'}
 ];
 
 @NgModule({

@@ -21,6 +21,10 @@ export class Authentication {
         this.currentUser.next(updated);
     }
 
+    reset() {
+        localStorage.clear();
+    }
+
     login(email: string, password: string): Observable<User> {
         return this.http.post('api/authenticate', {email: email, password: password})
             .map((r: Response) => {
