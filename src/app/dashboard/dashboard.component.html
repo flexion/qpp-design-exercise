@@ -51,7 +51,7 @@
         <td>{{getRoleName(connection.role)}}</td>
         <td><span class="usa-color-text"
                   [ngClass]="{'usa-color-text-green': connection.status === 1,
-                  'usa-color-text-secondary-dark': connection.status != 1}">
+                  'usa-color-text-primary': connection.status != 1}">
           {{getConnectionStatus(connection.status)}}</span>
         </td>
       </tr>
@@ -86,14 +86,14 @@
         <td>Surrogate</td>
         <td><span class="usa-color-text usa-color-text-green">Approved</span></td>
         <td>
-          <a href="">revoke access</a>
+          <a href="">Revoke Access</a>
         </td>
       </tr>
       <tr>
         <td scope="row">John Jones</td>
         <td>Presence Saint Francis Hospital</td>
         <td>Authorized Official</td>
-        <td><span class="usa-color-text usa-color-text-secondary-dark">Pending</span></td>
+        <td><span class="usa-color-text usa-color-text-primary">Pending</span></td>
         <td>
           <div class="button_wrapper">
             <button>Approve</button>

@@ -26,7 +26,7 @@ export class DashboardComponent implements OnInit {
     }
 
     getConnectionStatus(status){
-        return status ? ConnectionStatus[status] : 'pending';
+        return status ? ConnectionStatus[status] : 'Pending';
     }
 
     constructor(private auth: Authentication,
