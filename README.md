@@ -215,7 +215,7 @@ qpp-design-exercise/
  |   |   ├──practice/                 * Pactices view, logic, testing
  |   |   ├──profile/                  * Profile view, logic, testing
  |   |   ├──provider-connection       * provider connect grid view, logic, testing
- |   |   ├──registration/             * Registraiton view, logic, testing
+ |   |   ├──registration/             * Registration view, logic, testing
  |   |   ├──steps/                    * User steps view, logic, testing
  |   |   ├──usa-official/             * Partial containing official usa website copy
  │   │
