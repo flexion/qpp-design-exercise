@@ -12,8 +12,14 @@ Our prototype is written entirely in client-side code: ```HTML``` , ```CSS``` an
 Our chosen technologies include:
 
 * AngularJS 2.0 - https://angular.io/ with ARIA accessibility component
-* Bourbon - http://bourbon.io/ with Bitters http://bitters.bourbon.io/
+* Angular CLI - https://github.com/angular/angular-cli
+* Webpack - https://webpack.github.io/
+* Draft U.S. Web Design Standards - https://standards.usa.gov/
+* Protractor - http://www.protractortest.org/
 * Karma - https://karma-runner.github.io/1.0/index.html
+* Sass - http://sass-lang.com/
+* Node.js - https://nodejs.org/en/
+* Node Package Manager - https://www.npmjs.com/
 
 We've elected to deploy to GitHub Pages for this project.
 
@@ -182,22 +188,25 @@ qpp-design-exercise/
  |   ├──tests.ts               
  |   ├──tsconfig.json
  │   │
- │   ├──app/                         * application files
+ │   ├──app/                          * application files
  │   │   ├──app.component.html       * header and main content wrapper
  │   │   ├──app.component.spec.ts    * tests for app.component
  │   │   ├──app.component.ts         * component logic
  │   │   ├──app.modules.ts           * include sub-modules
- |   |   ├──is-authenticated.ts      * user authentication check
- |   |   ├──_models/                 * Data models
- |   |   ├──_services/               * Services
- |   |   ├──dashboard/               * Dashboard view, logic, testing
- |   |   ├──guard/                   * Authetication asset
- |   |   ├──login/                   * Login view, logic, testing
- |   |   ├──practice/                * Pactices view, logic, testing
- |   |   ├──profile/                 * Profile view, logic, testing
- |   |   ├──registration/            * Registraiton view, logic, testing
- |   |   ├──steps/                   * User steps view, logic, testing
- |   |   ├──usa-official/            * Partial containing official usa website copy
+ │   │   ├──app-routing.module       * include sub-modules
+ │   │   ├──is-authenticated         * authentication check
+ |   |   ├──is-authenticated.ts       * user authentication check
+ |   |   ├──_models/                  * Data models
+ |   |   ├──_services/                * Services
+ |   |   ├──dashboard/                * Dashboard view, logic, testing
+ |   |   ├──guard/                    * Authetication asset
+ |   |   ├──login/                    * Login view, logic, testing
+ |   |   ├──practice/                 * Pactices view, logic, testing
+ |   |   ├──profile/                  * Profile view, logic, testing
+ |   |   ├──provider-connection       * provider connect grid view, logic, testing
+ |   |   ├──registration/             * Registraiton view, logic, testing
+ |   |   ├──steps/                    * User steps view, logic, testing
+ |   |   ├──usa-official/             * Partial containing official usa website copy
  │   │
  │   └──assets/                * static assets are served here
  │       ├──css/               * CSS generated from SASS
