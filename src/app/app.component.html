@@ -18,9 +18,9 @@
             <span>Dashboard</span>
           </a>
         </li>
-        <li>
-          <a class="usa-nav-link" href="#">
-            <span>Menu Item</span>
+        <li *ngIf="(currentUser|async)">
+          <a class="usa-nav-link" routerLink="/clear-profile">
+            <span>Clear Profile</span>
           </a>
         </li>
       </ul>

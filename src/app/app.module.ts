@@ -10,6 +10,7 @@ import {UsaOfficalComponent} from './usa-offical/usa-offical.component';
 import {LoginComponent} from './login/login.component';
 import {RegistrationComponent} from './registration/registration.component';
 import {ProfileComponent} from './profile/profile.component';
+import {ClearProfileComponent} from './profile/clear-profile.component';
 import {Authentication} from './_services/authentication';
 import {AuthGuard} from './guard/auth.guard';
 import {DashboardComponent} from './dashboard/dashboard.component';
@@ -29,6 +30,7 @@ const appRoutes: Routes = [
     {path: 'login', component: LoginComponent},
     {path: 'register', component: RegistrationComponent},
     {path: 'profile', component: ProfileComponent, canActivate: [AuthGuard]},
+    {path: 'clear-profile', component: ClearProfileComponent, canActivate: [AuthGuard]},
     {path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard]},
     {path: 'steps', component: StepsComponent, canActivate: [AuthGuard]},
     {path: 'practice', component: PracticeComponent, canActivate: [AuthGuard]},
@@ -42,6 +44,7 @@ const appRoutes: Routes = [
         LoginComponent,
         RegistrationComponent,
         ProfileComponent,
+        ClearProfileComponent,
         DashboardComponent,
         StepsComponent,
         PracticeComponent,

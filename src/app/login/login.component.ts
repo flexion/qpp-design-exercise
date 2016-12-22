@@ -21,6 +21,7 @@ export class LoginComponent implements OnInit {
 
     ngOnInit() {
         this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || 'steps';
+     //   this.returnUrl = (this.returnUrl == 'clear-profile') ? 'steps' : this.returnUrl;
         this.authentication.logout();
     }
 
