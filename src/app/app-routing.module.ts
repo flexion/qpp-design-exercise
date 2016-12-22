@@ -17,8 +17,8 @@ const appRoutes: Routes = [
     {path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard]},
     {path: 'steps', component: StepsComponent, canActivate: [AuthGuard]},
     {path: 'practice', component: PracticeComponent, canActivate: [AuthGuard]},
-    {path: '', redirectTo: 'login', pathMatch: 'full'},
-    {path: '*', redirectTo: 'profile'}
+    {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
+    {path: '*', redirectTo: 'dashboard'}
 ];
 
 @NgModule({
