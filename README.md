@@ -5,7 +5,7 @@
 
 ## Approach
 ### Our Response
-While there were multiple response options allowed for in this design exercise, ranging from written narratives to a fully working prototypes and everything in between, we chose to build a clickable prototype using the web technologies that the team working on the exercise could deliver the fastest, with the rapid change cycles necessary to support a dynamic user feedback cycle. 
+While there were multiple response options allowed for in this design exercise, ranging from a written narrative to a fully working prototype and everything in between, we chose to build a clickable prototype using the web technologies that the team working on the exercise could deliver the fastest, with the rapid change cycles necessary to support a dynamic user feedback cycle. 
 
 Our prototype is written entirely in client-side code: ```HTML``` , ```CSS``` and ```JavaScript``` with test data populated using a ```json``` array and storing session data in ```HTML5 Local Storage``` using a ```RESTful API``` call. 
 
