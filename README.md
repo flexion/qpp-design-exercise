@@ -1,7 +1,9 @@
 # qpp-design-exercise
   * [Approach](#approach)
   * [Design Process Steps](#design-process-steps)
+  * [User Instructions](#user-instructions)
   * [Developer Installation Instructions](#developer-installation-instructions)
+  * [Development Tasks](#development-tasks)
 
 ## Approach
 ### Our Response
@@ -122,7 +124,7 @@ This is the bulk of the two-week sprint where the development team develops. Thi
 
 The Sprint Review is the accountability ceremony, where the team demos anything that meets the Definition of Done by the time this meeting takes place, or explains why things they expected to complete weren't. The PO accepts or rejects their work. The team also discusses why stories that they expected to complete aren't complete yet. (Hopefully, there have been enough regular interactions with the PO that the team already knows that the completed story will be accepted.)
 
-1. **The team demos the story.** The demo covers the acceptance criteria for the story and only features stories that achieve an adequate level of "doneness" as defined in the Definition of Done.
+1. **The team demos the story.** The demo covers the acceptance criteria for the story and only features stories that achieve an adequate and agreed-upon level of "doneness" as defined in the Definition of Done.
 
 1. **Hand over [system artifacts](https://github.com/flexion/qpp-design-exercise).** In this case, all artifacts are committed into the GitHub repository, which the PO and government have access to.
 
