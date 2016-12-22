@@ -11,7 +11,7 @@ Our prototype is written entirely in client-side code: ```HTML```, ```CSS``` and
 
 Our chosen technologies include:
 
-* AngularJS 2.0 - https://angular.io/ with ARIA accessibility component
+* AngularJS 2.0 - https://angular.io/
 * Angular CLI - https://github.com/angular/angular-cli
 * Webpack - https://webpack.github.io/
 * Draft U.S. Web Design Standards - https://standards.usa.gov/
