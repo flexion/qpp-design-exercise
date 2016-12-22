@@ -24,7 +24,7 @@ Our chosen technologies include:
 
 We've elected to deploy to GitHub Pages for this project.
 
-For usability testing we used Windows 10's built in XBox App Game DVR "Game Bar" to capture screens and voiceover, with a smal external boom microphone.
+For usability testing we used Windows 10's built in XBox App Game DVR "Game Bar" to capture screens and voiceover, with a small external boom microphone.
 
 For accessibility testing we tested manually after using IDI Web Accesibility Checker http://achecker.ca/checker/ for an initial, high level check against Section 508 and WCAG 2.0 AA guidelines.
 
