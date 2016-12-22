@@ -46,7 +46,6 @@ import {environment} from '../environments/environment';
         BrowserModule,
         FormsModule,
         HttpModule,
-//        RouterModule.forRoot(appRoutes)
         AppRoutingModule
     ],
     providers: [
@@ -59,8 +58,7 @@ import {environment} from '../environments/environment';
         fakeBackendProvider,
         MockBackend,
         BaseRequestOptions,
-        {provide: APP_BASE_HREF, useValue: environment.baseUrl},
-//      {provide: LocationStrategy, useClass: CustomLocationStrategy}
+        {provide: APP_BASE_HREF, useValue: environment.baseUrl}
     ],
     bootstrap: [AppComponent]
 })

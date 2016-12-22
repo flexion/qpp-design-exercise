@@ -2,6 +2,8 @@ import {Http, BaseRequestOptions, Response, ResponseOptions, RequestMethod, XHRB
 import {MockBackend, MockConnection} from '@angular/http/testing';
 import {Injectable, Provider} from '@angular/core';
 import {Observable} from 'rxjs/Observable';
+import {DATA_USERS} from '../../assets/data/users';
+import {DATA_PRACTICES} from '../../assets/data/practices';
 
 /**
  * lifted from https://github.com/cornflourblue/angular2-registration-login-example/blob/master/app/_helpers/fake-backend.ts
@@ -13,24 +15,18 @@ export function fakeBackendFactory(backend: MockBackend, options: BaseRequestOpt
     let users: any[] = JSON.parse(localStorage.getItem('users'));
     console.log('users from localstorage:', users);
     if (!users) {
-        realHttp.get('assets/data/users.json').subscribe((r: Response) => {
-            users = r.json();
-            console.log('users set in localstorage', users);
-            localStorage.setItem('users', JSON.stringify(users));
-        });
+        users = DATA_USERS;
+        console.log('users set in localstorage', users);
+        localStorage.setItem('users', JSON.stringify(users));
     }
     let practices: any[] = JSON.parse(localStorage.getItem('practices'));
     console.log('practices from localStorage:', practices);
     if (!practices) {
-        console.log('practices not in localstorage');
-        realHttp.get('assets/data/practices.json').subscribe((r: Response) => {
-            practices = r.json();
-            console.log('practices set in localstorage', practices);
-            localStorage.setItem('practices', JSON.stringify(practices));
-        });
+        practices = DATA_PRACTICES;
+        localStorage.setItem('practices', JSON.stringify(practices));
     }
 
-    // configure fake backend
+// configure fake backend
     backend.connections.subscribe((connection: MockConnection) => {
         // wrap in timeout to simulate server api call
         let url: string = connection.request.url;

@@ -43,7 +43,6 @@ export class ProviderConnectionComponent implements OnInit {
 
     ngOnInit() {
         this.authentication.currentUser.subscribe((user: User) => {
-            console.log('in provider connect component', user);
             this.user = user;
         });
     }
