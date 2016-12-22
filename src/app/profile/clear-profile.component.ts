@@ -23,7 +23,7 @@ export class ClearProfileComponent implements OnInit {
 
     ngOnInit() {
         this.authentication.reset();
-        this.router.navigate(['/login']);
+    //    this.authentication.logout();
     }
 
 }

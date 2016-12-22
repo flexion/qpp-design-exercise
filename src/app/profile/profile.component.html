@@ -13,7 +13,9 @@
           <div class="usa-input" [ngClass]="{'usa-input-error': name.invalid && name.touched}">
             <label for="first-name" class="usa-input-required">First name</label>
             <span class="usa-input-error-message" id="input-error-message" role="alert" [hidden]="name.valid || name.pristine" >Field is required</span>
-            <input id="first-name" name="first-name" type="text" aria-required="true" [(ngModel)]="user.first_name" #name="ngModel" required>
+            <input id="first-name" name="first-name" type="text" aria-required="true"
+                   [ngClass]="{'usa-input-success': name.valid}"
+                   [(ngModel)]="user.first_name" #name="ngModel" required>
           </div>
 
           <div class="usa-input">
@@ -24,7 +26,9 @@
           <div class="usa-input" [ngClass]="{'usa-input-error': last_name.invalid && last_name.touched}">
             <label for="last-name" class="usa-input-required">Last name</label>
             <span class="usa-input-error-message" id="input-error-message" role="alert" [hidden]="last_name.valid || last_name.pristine" >Field is required</span>
-            <input id="last-name" name="last-name" type="text" aria-required="true" [(ngModel)]="user.last_name" #last_name="ngModel" required>
+            <input id="last-name" name="last-name" type="text" aria-required="true"
+                   [ngClass]="{'usa-input-success': last_name.valid}"
+                   [(ngModel)]="user.last_name" #last_name="ngModel" required>
           </div>
 
           <div class="usa-input">
@@ -41,37 +45,43 @@
             <div class="usa-form-group usa-form-group-month">
               <label for="date_of_birth_1">Month</label>
               <input class="usa-input-inline" aria-describedby="dobHint" class="usa-form-control" id="date_of_birth_1"
-                     name="date_of_birth_1" pattern="0?[1-9]|1[012]" type="number" min="1" max="12" value="" placeholder="04" [(ngModel)]="user.birth_month" #month="ngModel" required>
+                     name="date_of_birth_1" pattern="0?[1-9]|1[012]" type="number" min="1" max="12" value="" placeholder="4"
+                     [ngClass]="{'usa-input-success': month.valid}"
+                     [(ngModel)]="user.birth_month" #month="ngModel" required>
             </div>
             <div class="usa-form-group usa-form-group-day">
               <label for="date_of_birth_2">Day</label>
               <input class="usa-input-inline" aria-describedby="dobHint" class="usa-form-control" id="date_of_birth_2"
                      name="date_of_birth_2" pattern="0?[1-9]|1[0-9]|2[0-9]|3[01]" type="number" min="1" max="31"
+                     [ngClass]="{'usa-input-success': day.valid}"
                      value="" [(ngModel)]="user.birth_day" placeholder="28" #day="ngModel" required>
             </div>
             <div class="usa-form-group usa-form-group-year">
               <label for="date_of_birth_3">Year</label>
               <input class="usa-input-inline" aria-describedby="dobHint" class="usa-form-control" id="date_of_birth_3"
-                     name="date_of_birth_3" pattern="[0-9]{4}" type="number" min="1900" max="2000" placeholder="1984" value="" [(ngModel)]="user.birth_year" #year="ngModel" required>
+                     name="date_of_birth_3" pattern="[0-9]{4}" type="number" min="1900" max="2000" placeholder="1984" value=""
+                     [ngClass]="{'usa-input-success': year.valid}"
+                     [(ngModel)]="user.birth_year" #year="ngModel" required>
             </div>
           </div>
         </fieldset>
-      </div>
-    </div>
-    <div class="usa-width-one-half">
-      <div class="usa-form">
-        <fieldset>
+
+        <fieldset class="margin-top-2">
           <legend>Company</legend>
           <div class="usa-input" [ngClass]="{'usa-input-error': company.invalid && company.touched}">
             <label for="company" class="usa-input-required">Company</label>
             <span class="usa-input-error-message" role="alert" [hidden]="company.valid || company.pristine" >Field is required</span>
-            <input id="company" name="company" type="text" [(ngModel)]="user.company_name" #company="ngModel" required>
+            <input id="company" name="company" aria-required="true" type="text"
+                   [ngClass]="{'usa-input-success': company.valid}"
+                   [(ngModel)]="user.company_name" #company="ngModel" required>
           </div>
 
           <div class="usa-input" [ngClass]="{'usa-input-error': job_title.invalid && job_title.touched}">
             <label for="job-title" class="usa-input-required">Job title</label>
             <span class="usa-input-error-message" id="input-error-message" role="alert" [hidden]="job_title.valid || job_title.pristine" >Field is required</span>
-            <input id="job-title" name="job-title" type="text" [(ngModel)]="user.company_title" #job_title="ngModel" required>
+            <input id="job-title" name="job-title" aria-required="true" type="text"
+                   [ngClass]="{'usa-input-success': job_title.valid}"
+                   [(ngModel)]="user.company_title" #job_title="ngModel" required>
           </div>
 
         </fieldset>
@@ -80,7 +90,9 @@
           <div class="usa-input" [ngClass]="{'usa-input-error': address.invalid && address.touched}">
             <label for="mailing-address-1" class="usa-input-required">Street address 1</label>
             <span class="usa-input-error-message" role="alert" [hidden]="address.valid || address.pristine" >Field is required</span>
-            <input id="mailing-address-1" name="mailing-address-1" type="text" [(ngModel)]="user.address" #address="ngModel" required>
+            <input id="mailing-address-1" name="mailing-address-1" aria-required="true" type="text"
+                   [ngClass]="{'usa-input-success': address.valid}"
+                   [(ngModel)]="user.address" #address="ngModel" required>
           </div>
 
           <div class="usa-input">
@@ -91,13 +103,15 @@
           <div class="usa-input" [ngClass]="{'usa-input-error': city.invalid && city.touched}">
             <label for="city" class="usa-input-required">City</label>
             <span class="usa-input-error-message" role="alert" [hidden]="city.valid || city.pristine" >Field is required</span>
-            <input id="city" name="city" type="text" [(ngModel)]="user.city" #city="ngModel" required>
+            <input id="city" name="city" type="text" [(ngModel)]="user.city"
+                   [ngClass]="{'usa-input-success': city.valid}"
+                   aria-required="true" #city="ngModel" required>
           </div>
 
 
           <div class="usa-input">
             <label for="state" class="usa-input-required">State</label>
-            <select id="state" name="state" [(ngModel)]="user.state" required>
+            <select id="state" name="state" [(ngModel)]="user.state" aria-required="true"  required>
               <option value></option>
               <option value="AL">Alabama</option>
               <option value="AK">Alaska</option>
@@ -157,7 +171,9 @@
             <label for="zip" class="usa-input-required">ZIP</label>
             <span class="usa-input-error-message" role="alert" [hidden]="zip.valid || zip.pristine" >Field is required</span>
             <input class="usa-input-medium" id="zip" name="zip" type="text" pattern="[\d]{5}(-[\d]{4})?"
-                   data-grouplength="5,4" data-delimiter="-" data-politespace [(ngModel)]="user.zip" #zip="ngModel" required>
+                   data-grouplength="5,4" data-delimiter="-" aria-required="true"
+                   [ngClass]="{'usa-input-success': zip.valid}"
+                   data-politespace [(ngModel)]="user.zip" #zip="ngModel" required>
           </div>
         </fieldset>
         <button class="usa-button usa-button-big" type="submit">Submit</button>

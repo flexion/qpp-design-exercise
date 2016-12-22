@@ -114,7 +114,8 @@ export function fakeBackendFactory(backend: MockBackend, options: BaseRequestOpt
                         return;
                     }
                     if (method === RequestMethod.Put) {
-                        Object.assign(user, JSON.parse(connection.request.getBody()));
+//                        Object.assign(user, JSON.parse(connection.request.getBody()));
+                        user = JSON.parse(connection.request.getBody());
                         localStorage.setItem('users', JSON.stringify(users));
                         localStorage.setItem('currentUser', JSON.stringify(user));
                         connection.mockRespond(new Response(new ResponseOptions({status: 200, body: user})));
