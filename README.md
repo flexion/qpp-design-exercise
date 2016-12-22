@@ -21,6 +21,8 @@ Our chosen technologies include:
 * Node.js - https://nodejs.org/en/
 * Node Package Manager - https://www.npmjs.com/
 
+For usability testing we used Windows 10's built in XBox App Game DVR "Game Bar" to capture screens and voiceover, with a smal external boom microphone. 
+
 We've elected to deploy to GitHub Pages for this project.
 
 ### Our Agile Dev Process
@@ -117,7 +119,7 @@ This is the bulk of the two-week sprint where the development team develops. Thi
 
 The Sprint Review is the accountability ceremony, where the team demos anything that meets the Definition of Done by the time this meeting takes place, or explains why things they expected to complete weren't. The PO accepts or rejects their work. The team also discusses why stories that they expected to complete aren't complete yet. (Hopefully, there have been enough regular interactions with the PO that the team already knows that the completed story will be accepted.)
 
-1. **The team demos that the story.** The demo covers the acceptance criteria for the story and is only given for stories that meet a predefined subset of the Definition of Done.
+1. **The team demos the story.** The demo covers the acceptance criteria for the story and is only given for stories that meet a predefined subset of the Definition of Done. [TODO: Need Doug's input on rewording this]
 
 1. **Hand over [system artifacts](https://github.com/flexion/qpp-design-exercise).** In this case, all artifacts are committed or uploaded into GitHub to which the PO and government have access.
 
