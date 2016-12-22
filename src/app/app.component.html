@@ -12,13 +12,13 @@
       <button class="usa-nav-close">
         <img src="assets/img/close.svg" alt="close">
       </button>
-      <ul class="usa-nav-primary usa-accordion">
+      <ul *ngIf="(currentUser|async)" class="usa-nav-primary usa-accordion">
         <li>
           <a class="usa-nav-link" routerLink="/dashboard">
             <span>Dashboard</span>
           </a>
         </li>
-        <li *ngIf="(currentUser|async)">
+        <li>
           <a class="usa-nav-link" routerLink="/clear-profile">
             <span>Clear Profile</span>
           </a>

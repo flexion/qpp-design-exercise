@@ -1,4 +1,4 @@
-import { RouterModule, Routes } from '@angular/router';
+import {RouterModule, Routes} from '@angular/router';
 import {LoginComponent} from './login/login.component';
 import {RegistrationComponent} from './registration/registration.component';
 import {ProfileComponent} from './profile/profile.component';
@@ -10,7 +10,6 @@ import {PracticeComponent} from './practice/practice.component';
 import {NgModule} from '@angular/core';
 
 const appRoutes: Routes = [
-    {path: '', component: LoginComponent},
     {path: 'login', component: LoginComponent},
     {path: 'register', component: RegistrationComponent},
     {path: 'profile', component: ProfileComponent, canActivate: [AuthGuard]},
@@ -18,12 +17,13 @@ const appRoutes: Routes = [
     {path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard]},
     {path: 'steps', component: StepsComponent, canActivate: [AuthGuard]},
     {path: 'practice', component: PracticeComponent, canActivate: [AuthGuard]},
-    {path: '**', redirectTo: 'steps'}
+    {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
+    {path: '*', redirectTo: 'login'}
 ];
 
 @NgModule({
     imports: [
-        RouterModule.forRoot(appRoutes)
+        RouterModule.forRoot(appRoutes, {useHash: true})
     ],
     exports: [
         RouterModule

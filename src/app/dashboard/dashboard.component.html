@@ -7,8 +7,8 @@
       <p>{{(currentUser|async).address}}<br/>{{(currentUser|async).city}}, {{(currentUser|async).state}} {{(currentUser|async).zip}}</p>
       <button>Change Password</button>
       <button routerLink="/profile">Edit Profile</button>
-      <button><a class="usa-color-text-white text-decoration-none" href="/dashboard#your-connections">Manage Connections</a></button>
-      <button><a class="usa-color-text-white text-decoration-none" href="/dashboard#your-users">Manage Users</a></button>
+      <button><a class="usa-color-text-white text-decoration-none" [routerLink]="['/dashboard']" fragment="your-connections">Manage Connections</a></button>
+      <button><a class="usa-color-text-white text-decoration-none" [routerLink]="['/dashboard']" fragment="your-connections">Manage Users</a></button>
     </div>
   </div>
 
@@ -17,7 +17,7 @@
       <div class="usa-alert-body">
         <h3 class="usa-alert-heading">Your Connection Request is in process.</h3>
         <p class="usa-alert-text">Requests must be approved by the practice. This usually takes 1-3 business days.</p>
-        <p class="usa-alert-text">You can view the status of your <a href="/dashboard#your-connections">connections</a> below or  <a [routerLink]="['/practice']">search and connect</a> to additional practices.</p>
+        <p class="usa-alert-text">You can view the status of your <a [routerLink]="['/dashboard']" fragment="your-connections">connections</a> below or  <a [routerLink]="['/practice']">search and connect</a> to additional practices.</p>
       </div>
     </div>
 

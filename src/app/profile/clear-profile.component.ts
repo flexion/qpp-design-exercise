@@ -1,24 +1,20 @@
 import {Component, OnInit, Input} from '@angular/core';
 
 import {User} from '../_models/user';
-import {Provider} from '../_models/provider';
-import {Connection, EmployeeRole} from '../_models/surrogate';
 import {UsersService} from '../_services/users.service';
 import {Authentication} from '../_services/authentication';
 import {Router} from '@angular/router';
 
 @Component({
     selector: 'app-clear-profile',
-    template:'<ng-content></ng-content><section class=\"usa-grid usa-section\"><h2>User data cleared</h2><p><a class=\"usa-button\" href=\"/login\">Login</a></p></section>'
+    template: `<section class="usa-grid usa-section">
+    <h2>User data cleared</h2>
+    <p><a class="usa-button" routerLink="/login">Login</a></p>
+    </section>`
 })
 export class ClearProfileComponent implements OnInit {
 
-    @Input()
-    user: User;
-    connection: Connection;
-    provider: Provider;
     error: string;
-    redirect: string;
 
     constructor(private usersService: UsersService,
                 private authentication: Authentication,
@@ -27,44 +23,8 @@ export class ClearProfileComponent implements OnInit {
 
 
     ngOnInit() {
-        this.authentication.currentUser.subscribe(
-            (user: User) => {
-                /*
-                let connection = new Connection();
-                this.provider.id = 19;
-                this.provider.name = "Presence Holy Family Medical Center";
-                this.provider.npi = "3242342";
-                this.provider.status = '1';
-                connection.role = 1;
-                connection.status = 1;
-                connection.provider = this.provider;
-                */
-                this.user = user;
-                this.user.title = "";
-                this.user.first_name = "";
-                this.user.last_name = "";
-                this.user.suffix = "";
-                this.user.birth_day = "";
-                this.user.birth_month = "";
-                this.user.birth_year = "";
-                this.user.company_name = "";
-                this.user.company_title = "";
-                this.user.address = "";
-                this.user.address2 = "";
-                this.user.city = "";
-                this.user.state = "";
-                this.user.zip = "";
-                this.user.step = "profile";
-                this.user.dashboard_landings = 0;
-                this.usersService.updateUser(this.user)
-                    .subscribe(
-                        () => {
-                            console.log('success');
-                         //   this.router.navigate(['/']);
-                        },
-                        (e: any) => this.error = 'Error updating'
-                    );
-            });
+        this.authentication.reset();
+        this.authentication.logout();
     }
 
 }

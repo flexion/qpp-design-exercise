@@ -15,7 +15,7 @@ export class PracticesService {
     }
 
     getPractices(): Observable<Provider[]> {
-        return this.http.get('/api/practices')
+        return this.http.get('api/practices')
             .map((res: Response) => res.json())
             .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
     }
