@@ -4,7 +4,22 @@
   * [Installation](#installation)
 
 ## Approach
-There are multiple response options allowed for this design exercise, from written documents to a fully working prototype and everything in between. We chose to build a clickable prototype using the web technologies that those working on the exercise could deliver the fastest, with the rapid change cycles necessary to support a dynamic user feedback cycle. These technologies include...
+### Our Response
+While there were multiple response options allowed for in this design exercise, ranging from written narratives to a fully working prototypes and everything in between, we chose to build a clickable prototype using the web technologies that the team working on the exercise could deliver the fastest, with the rapid change cycles necessary to support a dynamic user feedback cycle. 
+
+Our prototype is written entirely in client-side code: ```HTML``` , ```CSS``` and ```JavaScript``` with test data populated using a ```json``` array and storing session data in ```HTML5 Local Storage``` using a ```RESTful API``` call. 
+
+Our chosen technologies include:
+
+* AngularJS 2.0 - https://angular.io/ with ARIA accessibility component
+* Bourbon - http://bourbon.io/ with Bitters http://bitters.bourbon.io/
+* Karma - https://karma-runner.github.io/1.0/index.html
+
+We've elected to deploy to GitHub Pages for this project.
+
+### Our Agile Dev Process
+
+![Flexion Agile Dev Process](https://github.com/flexion/qpp-design-exercise/blob/master/project_assets/design-deliverables/flexion_agile_dev_nethodology_screen.png)``
 
 ## Design Process Steps
 Below are the steps we would normally take to develop a user story. Because this is a demo constructed in an abbreviated time frame by a partial team, some of the steps are "stubs", listed so you can see where they fall in the process. Links will take you to the artifacts that are associated with the step in the process.
