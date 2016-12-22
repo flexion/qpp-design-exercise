@@ -25,7 +25,7 @@ We've elected to deploy to GitHub Pages for this project.
 
 ### Our Agile Dev Process
 
-![Flexion Agile Dev Process](https://github.com/flexion/qpp-design-exercise/blob/master/project_assets/design-deliverables/flexion_agile_dev_nethodology_screen.png)``
+![Flexion Agile Dev Process](https://github.com/flexion/qpp-design-exercise/blob/master/project_assets/design-deliverables/flexion_agile_dev_nethodology_screen.png)
 
 ## Design Process Steps
 Below are the steps we would normally take to develop a user story. Because this is a demo constructed in an abbreviated time frame by a partial team, some of the steps are "stubs", listed so you can see where they fall in the process. Links will take you to the artifacts that are associated with the step in the process.
