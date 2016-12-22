@@ -9,7 +9,7 @@ import {Router} from '@angular/router';
     selector: 'app-clear-profile',
     template: `<section class="usa-grid usa-section">
     <h2>User data cleared</h2>
-    <p><a class="usa-button" routerLink="/login">Login</a></p>
+    <p><a class="usa-button" href="/#/login">Login</a></p>
     </section>`
 })
 export class ClearProfileComponent implements OnInit {
@@ -24,7 +24,7 @@ export class ClearProfileComponent implements OnInit {
 
     ngOnInit() {
         this.authentication.reset();
-        this.authentication.logout();
+    //    this.authentication.logout();
     }
 
 }
