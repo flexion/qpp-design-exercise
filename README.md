@@ -92,18 +92,18 @@ The purpose of Sprint Planning is to pull enough work into the next upcoming spr
 
 ### 4. Execute the Sprint.
 
-This is the bulk of the two-week sprint where the development team develops. This includes identifying and evaluating options, developing them, testing them, and completing all tasks in the Definition of Done.
+This is the bulk of the two-week sprint where the development team develops. This includes identifying and evaluating options, developing them, testing them, and completing all tasks in the Definition of Done (DoD).
 
 1. **UX designers develop [low-fidelity static design options](https://github.com/flexion/qpp-design-exercise/blob/master/project_assets/design-deliverables/wireframes/QPP-wireframes.pdf
-).** These are the initial UX tasks (collaborate with user and FE Dev) that result in wireframes and a user flow, illustrating the steps a user would take to complete the task.
+).** These are the initial UX tasks done in close collaboration with the user and Front-End Developers that result in wireframes and a user flow, illustrating the steps a user would take to complete the task.
 
-1. FE Dev to create static (shallow working click-through) options in html/css (collaborate with user and UX designer). https://github.com/flexion/qpp-design-exercise/tree/master/project_assets/design-deliverables/Round%201
+1. **Front-End Developers create [static options in html/css](https://github.com/flexion/qpp-design-exercise/tree/master/project_assets/design-deliverables/Round%201).** This collaboration with the user and UX results in a shallow working click-through.
 
-1. Review of the static click-through by user, UX designer and FE Dev providing comments and suggestions for improvement. https://github.com/flexion/qpp-design-exercise/blob/master/project_assets/design-deliverables/Round%201/team-feedback/QPP-RD1-comments.pdf
+1. **Review of the static click-through producing [comments and suggestions](https://github.com/flexion/qpp-design-exercise/blob/master/project_assets/design-deliverables/Round%201/team-feedback/QPP-RD1-comments.pdf).** This review is a collaborative exercise that includes the user, UX designer, and Front-End Developer identifies opportunities for improvement.
 
-1. FE Dev and UX Designer collaborate to implement changes inspired by feedback. https://github.com/flexion/qpp-design-exercise/tree/master/project_assets/design-deliverables/Round%202
+1. **Implement [improvments from feedback](https://github.com/flexion/qpp-design-exercise/tree/master/project_assets/design-deliverables/Round%202).** The Front-End Developer and UX Designer make improvements to the static click-through based on the comments and suggestions recieved in the previous step.
 
-1. Automated tests (ATDD/BDD) are written to capture the expected behavior, and integrated with the CI/CD pipeline.
+1. **Create automated ATDD/BDD tests from the statuc click-through.** These tests drive production development and are integrated into the CI/CD pipeline.
 
 1. The development team collaborates to fully build out the user story and its supporting unit tests. Implementation decouples design, style, and function to the greatest extent possible. We create a “Clean Architecture”.
 
