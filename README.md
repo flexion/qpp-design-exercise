@@ -5,7 +5,7 @@
 
 ## Approach
 ### Our Response
-While there were multiple response options allowed for in this design exercise, ranging from a written narrative to a fully working prototype and everything in between, we chose to build a clickable prototype using the web technologies that the team working on the exercise could deliver the fastest, with the rapid change cycles necessary to support a dynamic user feedback cycle. 
+While there were multiple allowed response options for this design exercise, ranging from a written narrative to a fully working prototype and everything in between, we chose to build a clickable prototype using the web technologies that the team working on the exercise could deliver the fastest, supporting the rapid change cycles necessary to incorporate dynamic user feedback. 
 
 Our prototype is written entirely in client-side code: ```HTML```, ```CSS``` and ```JavaScript``` with test data populated using a ```json``` array and storing session data in ```HTML5 Local Storage``` using a ```RESTful API``` call. 
 
@@ -26,20 +26,20 @@ We've elected to deploy to GitHub Pages for this project.
 
 For usability testing we used Windows 10's built in XBox App Game DVR "Game Bar" to capture screens and voiceover, with a small external boom microphone.
 
-For accessibility testing we tested manually after using IDI Web Accesibility Checker http://achecker.ca/checker/ for an initial, high level check against Section 508 and WCAG 2.0 AA guidelines.
+For accessibility testing we tested manually after using IDI Web Accesibility Checker: http://achecker.ca/checker/ for an initial, high level pass against Section 508 and WCAG 2.0 AA guidelines.
 
 ### Our Agile Dev Process
 
 ![Flexion Agile Dev Process](https://github.com/flexion/qpp-design-exercise/blob/master/project_assets/design-deliverables/flexion_agile_dev_nethodology_screen.png)
 
 ## Design Process Steps
-Below are the steps we would normally take to develop a user story. Because this is a demo constructed in an abbreviated time frame by a partial team, some of the steps are "stubs", listed so you can see where they fall in the process. Links will take you to the artifacts that are associated with the step in the process.
+Below are the steps we would normally take to develop a user story. Because this is a demo constructed in a shortened time frame by a partial team, some of the steps are "stubs," listed so you can see where they fall in the process. Links will take you to the artifacts that are associated with the step in the process.
 
-Also, each story goes through all of these process steps. The number of user stories that go through the cycle together is a function of the maturity of the Scrum team. As we improve our processes, the size of each "batch" decreases while the value delivered each sprint increases.
+Each story goes through all of these process steps. The number of user stories that go through the cycle together is a function of the maturity of the Scrum team. As we improve our processes, the size of each "batch" decreases while the value delivered each sprint increases.
 
 ### 1. Identify persona and epic or user story.
 
-The purpose of identifying personas and their epics and user stories is simply to understand the problems that need to be solved.
+The purpose of creating personas and their associated epics and user stories is simply to better understand the design problems that need to be solved and who we are solving them for.
 
 1. **Name and describe [the persona](https://github.com/flexion/qpp-design-exercise/blob/master/project_assets/design-deliverables/personas/QPP.Persona.-.Debra.pdf).**
 
@@ -80,7 +80,7 @@ The purpose of Sprint Planning is to pull enough work into the next upcoming spr
 
 1. **The team crafts a Sprint Goal.** The sprint goal is a unifying goal that binds together all user stories accepted into the sprint.
 
-1. **The team whiteboards a static user task list.** This exercise used to think about the logical steps to achieve the goal of the story. Thinking through these steps helps the team subsume the user story into the system and consider how to implement them in a manner consistent with the system’s metaphor and general UX tenets and guidelines. For example:
+1. **The team whiteboards a static user task list.** This exercise is used to think through the logical steps to achieve the goal of the story. Thinking through these steps helps the team subsume the user story into the system and consider how to implement them in a manner consistent with the system’s metaphor and general UX tenets and guidelines. For example:
 
    ```
    1. User verifies email.
@@ -122,9 +122,9 @@ This is the bulk of the two-week sprint where the development team develops. Thi
 
 The Sprint Review is the accountability ceremony, where the team demos anything that meets the Definition of Done by the time this meeting takes place, or explains why things they expected to complete weren't. The PO accepts or rejects their work. The team also discusses why stories that they expected to complete aren't complete yet. (Hopefully, there have been enough regular interactions with the PO that the team already knows that the completed story will be accepted.)
 
-1. **The team demos the story.** The demo covers the acceptance criteria for the story and is only given for stories that meet a predefined subset of the Definition of Done. [TODO: Need Doug's input on rewording this]
+1. **The team demos the story.** The demo covers the acceptance criteria for the story and only features stories that achieve an adequate level of "doneness" as defined in the Definition of Done.
 
-1. **Hand over [system artifacts](https://github.com/flexion/qpp-design-exercise).** In this case, all artifacts are committed or uploaded into GitHub to which the PO and government have access.
+1. **Hand over [system artifacts](https://github.com/flexion/qpp-design-exercise).** In this case, all artifacts are committed into the GitHub repository, which the PO and government have access to.
 
 1. **A [working version of the system](https://flexion.github.io/qpp-deploy) is accessible to the PO.**
 
@@ -141,9 +141,9 @@ For the purpose of this exercise, the application is pre-populated with test dat
 
 1. You are taken back to the page outlining the steps in the process. It now shows the next actionable step "request to connect with practice"
 
-1. Clicking "request to connect" takes you to a page asking you to search for a practice. Because we have pre-populated the test data, you can enter anything into the search input and click 'Search'
+1. Clicking "request to connect" takes you to a page asking you to search for a practice. Because we have pre-populated the test data, you can enter anything (or nothing) into the search input and click 'Search'
 
-1. Hypothetical search results are returned. Next to one of the practices, choose which role you would like to connect to the practice as and click 'request to connect'
+1. Demo search results are returned. Next to one of the practices, choose which role you would like to connect to the practice as and click 'request to connect'
 
 1. You will be redirected to your Dashboard and see a success message with any next steps.
 
