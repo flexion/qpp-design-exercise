@@ -137,6 +137,8 @@ For the purpose of this exercise, the application is pre-populated with test dat
 
 1. On your dashboard, you will see all of your pending and approved practice connections as well as your pending and approved surrogates, with the ability to approve, deny, or revoke access on each surrogate.
 
+1. All of the data entered is saved in your browser's local storage. If you want to start from the beginning with a clean user, while logged in, click 'clear profile' link in main menu.
+
 ## Developer Installation Instructions
 ### Prerequisites
 The following must be installed on your computer
