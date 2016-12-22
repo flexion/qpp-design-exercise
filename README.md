@@ -107,7 +107,7 @@ This is the bulk of the two-week sprint where the development team develops. Thi
 
 1. **The development team collaborates to fully build out the user story and its supporting unit tests.** Implementation decouples design, style, and function to the greatest extent possible. We create a “Clean Architecture”.
 
-1. **[The user story is validated](https://github.com/flexion/qpp-design-exercise/project_assets/user-research/QPPTest-Report.pdf)**. Validation is accommplished by testing with real people who have been identified as likely prospective users of the system. You can view [video snippets of several test users'](https://flexion.wistia.com/medias/hs5ka2xir6) major pain points. A password is required to access the video: ```cmsuser1```
+1. **[The user story is validated](https://github.com/flexion/qpp-design-exercise/blob/master/project_assets/user-research/QPPTest-Report.pdf)**. Validation is accommplished by testing with real people who have been identified as likely prospective users of the system. You can view [video snippets of several test users'](https://flexion.wistia.com/medias/hs5ka2xir6) major pain points. A password is required to access the video: ```cmsuser1```
 
 1. **Recommendations from the user testing are placed into the project backlog for implementation in the application.**
 
@@ -121,10 +121,10 @@ The Sprint Review is the accountability ceremony, where the team demos anything 
 
 1. **Hand over [system artifacts](https://github.com/flexion/qpp-design-exercise).** In this case, all artifacts are committed or uploaded into GitHub to which the PO and government have access.
 
-1. **A [working version of the system](URL to clickable prototype here) is accessible to the PO.**
+1. **A [working version of the system](https://flexion.github.io/qpp-deploy) is accessible to the PO.**
 
 ## User Instructions
-Visit and interact with the application at <insert github pages url here> 
+Visit and interact with the application at https://flexion.github.io/qpp-deploy. 
 
 For the purpose of this exercise, the application is pre-populated with test data. As a user you will complete the following steps:
 
