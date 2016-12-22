@@ -1,6 +1,8 @@
 import {Component, OnInit, Input} from '@angular/core';
 
 import {User} from '../_models/user';
+import {Provider} from '../_models/provider';
+import {Connection, EmployeeRole} from '../_models/surrogate';
 import {UsersService} from '../_services/users.service';
 import {Authentication} from '../_services/authentication';
 import {Router} from '@angular/router';
@@ -13,6 +15,8 @@ export class ClearProfileComponent implements OnInit {
 
     @Input()
     user: User;
+    connection: Connection;
+    provider: Provider;
     error: string;
     redirect: string;
 
@@ -25,6 +29,16 @@ export class ClearProfileComponent implements OnInit {
     ngOnInit() {
         this.authentication.currentUser.subscribe(
             (user: User) => {
+                /*
+                let connection = new Connection();
+                this.provider.id = 19;
+                this.provider.name = "Presence Holy Family Medical Center";
+                this.provider.npi = "3242342";
+                this.provider.status = '1';
+                connection.role = 1;
+                connection.status = 1;
+                connection.provider = this.provider;
+                */
                 this.user = user;
                 this.user.title = "";
                 this.user.first_name = "";
@@ -41,7 +55,6 @@ export class ClearProfileComponent implements OnInit {
                 this.user.state = "";
                 this.user.zip = "";
                 this.user.step = "profile";
-                this.user.connections = [];
                 this.user.dashboard_landings = 0;
                 this.usersService.updateUser(this.user)
                     .subscribe(

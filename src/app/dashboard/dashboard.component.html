@@ -13,7 +13,7 @@
   </div>
 
   <div class="usa-width-two-thirds">
-    <div class="usa-alert usa-alert-success" *ngIf="(currentUser|async).connections != 0">
+    <div class="usa-alert usa-alert-success" *ngIf="(currentUser|async).connections != 0" role="alertdialog">
       <div class="usa-alert-body">
         <h3 class="usa-alert-heading">Your Connection Request is in process.</h3>
         <p class="usa-alert-text">Requests must be approved by the practice. This usually takes 1-3 business days.</p>

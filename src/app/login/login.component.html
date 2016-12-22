@@ -10,11 +10,10 @@
 
               <div *ngIf=error class="usa-alert usa-alert-error" role="alert">
                 <div class="usa-alert-body">
-                  <h3 class="usa-alert-heading">Error Status</h3>
-                  <p class="usa-alert-text">{{error}}</p>
+                  <h3 class="usa-alert-heading usa-color-text-secondary-dark">Error</h3>
+                  <p class="usa-alert-text usa-color-text-secondary-dark">{{error}}, please make sure your email address and password are entered correct</p>
                 </div>
               </div>
-
 
               <label for="email">Email address</label>
               <input id="email" name="email" [(ngModel)]="model.email" #email="ngModel" type="text" autocapitalize="off" autocorrect="off">
