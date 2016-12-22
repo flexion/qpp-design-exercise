@@ -21,9 +21,12 @@
       </div>
     </div>
 
-    <h2>Welcome, {{currentUser.first_name}}</h2>
+    <h2>Welcome, {{(currentUser|async).first_name}}</h2>
     <!-- only show this on first access -->
+    <!--
     <div *ngIf="(currentUser|async).dashboard_landings < 2">
+    -->
+    <div *ngIf="getLandings() < 2">
       <p>Thanks for joining the Quality Payment Program community!</p>
       <p>Congratulations on completing your profile and connecting to a medical practice! You're well on your way to successfully using the Quality Payment Program system. We're glad to have you working with us in the quest to provide better care and smarter spending for a healthier America.</p>
     </div>

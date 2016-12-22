@@ -23,6 +23,7 @@ import {ProfileComponent} from './profile/profile.component';
 import {RegistrationComponent} from './registration/registration.component';
 import {FormsModule} from '@angular/forms';
 import {RouterTestingModule} from '@angular/router/testing';
+import {ClearProfileComponent} from './profile/clear-profile.component';
 
 describe('AppComponent', () => {
     beforeEach(() => {
@@ -38,9 +39,10 @@ describe('AppComponent', () => {
                 PracticeComponent,
                 ProviderConnectionComponent,
                 ProviderSearchListComponent,
-                ProviderConnectionRoleComponent
+                ProviderConnectionRoleComponent,
+                ClearProfileComponent
             ],
-            imports: [AppRoutingModule, RouterTestingModule, FormsModule, HttpModule],
+            imports: [AppRoutingModule, FormsModule, HttpModule],
             providers: [
                 Authentication,
                 UsersService,

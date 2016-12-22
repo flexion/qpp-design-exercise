@@ -9,9 +9,8 @@ import {DATA_PRACTICES} from '../../assets/data/practices';
  * lifted from https://github.com/cornflourblue/angular2-registration-login-example/blob/master/app/_helpers/fake-backend.ts
  */
 
-export function fakeBackendFactory(backend: MockBackend, options: BaseRequestOptions, realBackend: XHRBackend): Http {
+export function fakeBackendFactory(backend: MockBackend, options: BaseRequestOptions): Http {
     // array in local storage for registered users
-    let realHttp = new Http(realBackend, options);
     let users: any[] = JSON.parse(localStorage.getItem('users'));
     console.log('users from localstorage:', users);
     if (!users) {
@@ -157,11 +156,6 @@ export function fakeBackendFactory(backend: MockBackend, options: BaseRequestOpt
                 return;
             }
 
-            // pass through any requests not handled above
-            realHttp.get(url).subscribe((response: Response) => {
-                connection.mockRespond(response);
-            });
-
         }, 500);
 
     });
@@ -173,5 +167,5 @@ export let fakeBackendProvider = {
     // use fake backend in place of Http service for backend-less development
     provide: Http,
     useFactory: fakeBackendFactory,
-    deps: [MockBackend, BaseRequestOptions, XHRBackend]
+    deps: [MockBackend, BaseRequestOptions]
 };

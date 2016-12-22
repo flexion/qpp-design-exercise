@@ -23,8 +23,8 @@ export class RegistrationComponent implements OnInit {
         this.usersService.registerUser(this.registration).subscribe(
             () => {
                 // login on successful registration
-                this.authentication.login(this.registration.email, this.registration.password);
-                this.router.navigate(['/profile']);
+                this.authentication.login(this.registration.email, this.registration.password)
+                    .subscribe(() => this.router.navigate(['/profile']));
             },
             e => {
                 this.error = e;

@@ -5,15 +5,21 @@ import {DebugElement} from '@angular/core';
 
 import {DashboardComponent} from './dashboard.component';
 import {Authentication} from '../_services/authentication';
+import {RouterTestingModule} from '@angular/router/testing';
+import {User} from '../_models/user';
+import {Observable} from 'rxjs';
+import {AuthenticationStub} from '../../testing/authentication.stub';
 
 describe('DashboardComponent', () => {
     let component: DashboardComponent;
     let fixture: ComponentFixture<DashboardComponent>;
 
     beforeEach(async(() => {
+
         TestBed.configureTestingModule({
                 declarations: [DashboardComponent],
-                providers: [Authentication]
+                providers: [{provide: Authentication, useClass: AuthenticationStub}],
+                imports: [RouterTestingModule]
             })
             .compileComponents();
     }));

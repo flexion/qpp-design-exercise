@@ -10,6 +10,10 @@ export class Authentication {
 
     currentUser: BehaviorSubject<User> = new BehaviorSubject<User>(null);
 
+    getUser(): Observable<User> {
+        return this.currentUser.asObservable();
+    }
+
     constructor(private http: Http) {
         this.currentUser.subscribe((user: User) => console.log('updating user', user));
         this.currentUser.next(JSON.parse(localStorage.getItem('currentUser')));
@@ -23,6 +27,7 @@ export class Authentication {
 
     reset() {
         localStorage.clear();
+        this.currentUser.next(null);
     }
 
     login(email: string, password: string): Observable<User> {

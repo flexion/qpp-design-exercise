@@ -16,15 +16,14 @@ export class ClearProfileComponent implements OnInit {
 
     error: string;
 
-    constructor(private usersService: UsersService,
-                private authentication: Authentication,
+    constructor(private authentication: Authentication,
                 private router: Router) {
     }
 
 
     ngOnInit() {
         this.authentication.reset();
-        this.authentication.logout();
+        this.router.navigate(['/login']);
     }
 
 }

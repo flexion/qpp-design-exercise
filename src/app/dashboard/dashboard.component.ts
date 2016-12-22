@@ -1,11 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 
-import {Provider} from '../_models/provider';
 import {Authentication} from '../_services/authentication';
 import {User} from '../_models/user';
-import {UsersService} from '../_services/users.service';
 import {EmployeeRole, ConnectionStatus} from '../_models/surrogate';
-import {Subscribable} from 'rxjs/Observable';
+import {Observable} from 'rxjs';
 
 @Component({
     selector: 'app-dashboard',
@@ -14,9 +12,10 @@ import {Subscribable} from 'rxjs/Observable';
 })
 export class DashboardComponent implements OnInit {
 
-    currentUser: Subscribable<User>;
+    static landings: number = 0;
+    currentUser: Observable<User>;
 
-  //  currentUser: User;
+    //  currentUser: User;
     roles: EmployeeRole;
     error: string;
     status: ConnectionStatus;
@@ -25,33 +24,21 @@ export class DashboardComponent implements OnInit {
         return role ? EmployeeRole[role] : '';
     }
 
-    getConnectionStatus(status){
+    getConnectionStatus(status) {
         return status ? ConnectionStatus[status] : 'Pending';
     }
 
-    constructor(private auth: Authentication,
-                private usersService: UsersService) {
+    constructor(private auth: Authentication) {
+
+    }
+
+    getLandings(): number {
+        return DashboardComponent.landings;
     }
 
     ngOnInit() {
-        this.currentUser = this.auth.currentUser;
-
-        this.auth.currentUser.subscribe(
-            (user: User) => {
-                if(!user.dashboard_landings){
-                    user.dashboard_landings = 0;
-                }
-                user.dashboard_landings += 1;
-                this.usersService.updateUser(user)
-                    .subscribe(
-                        () => {
-                            console.log('success');
-                        },
-                        (e: any) => this.error = 'Error updating'
-                    );
-                console.log('dashboard user', user);
-            });
-
+        DashboardComponent.landings += 1;
+        this.currentUser = this.auth.getUser();
     }
 
 }

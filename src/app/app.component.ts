@@ -1,6 +1,8 @@
 import {Component, OnInit, Injectable} from '@angular/core';
 import {Authentication} from './_services/authentication';
 import {Router} from '@angular/router';
+import {Observable} from 'rxjs';
+import {User} from './_models/user';
 
 @Component({
     selector: 'app-root',
@@ -9,12 +11,12 @@ import {Router} from '@angular/router';
 })
 @Injectable()
 export class AppComponent implements OnInit {
-    currentUser: any;
+    currentUser: Observable<User>;
 
     constructor(private authentication: Authentication, private router: Router) {
     }
 
     ngOnInit() {
-        this.currentUser = this.authentication.currentUser;
+        this.currentUser = this.authentication.getUser();
     }
 }
