@@ -7,7 +7,7 @@
 ### Our Response
 While there were multiple response options allowed for in this design exercise, ranging from a written narrative to a fully working prototype and everything in between, we chose to build a clickable prototype using the web technologies that the team working on the exercise could deliver the fastest, with the rapid change cycles necessary to support a dynamic user feedback cycle. 
 
-Our prototype is written entirely in client-side code: ```HTML``` , ```CSS``` and ```JavaScript``` with test data populated using a ```json``` array and storing session data in ```HTML5 Local Storage``` using a ```RESTful API``` call. 
+Our prototype is written entirely in client-side code: ```HTML```, ```CSS``` and ```JavaScript``` with test data populated using a ```json``` array and storing session data in ```HTML5 Local Storage``` using a ```RESTful API``` call. 
 
 Our chosen technologies include:
 
@@ -59,7 +59,7 @@ The purpose of refining the backlog is to subsume new PO goals into the backlog 
    Permission to manage the practice has been granted and is visible.
    ```
 
-1. **The team estimates the value-flow rate relative to other user stories.** Two components are inputs to value-flow rate; relative cost of delay (estimated by business) and relative duration (estimated by Scrum team).
+1. **The team estimates the value-flow rate relative to other user stories.** Two components are inputs to value-flow rate: relative cost of delay (estimated by business) and relative duration (estimated by Scrum team).
    
 ### 3. Plan the Sprint.
 
@@ -75,13 +75,13 @@ The purpose of Sprint Planning is to pull enough work into the next upcoming spr
 
 1. **The team crafts a Sprint Goal.** The sprint goal is a unifying goal that binds together all user stories accepted into the sprint.
 
-1. **The team whiteboards a static user task list.** This exercise used to think about the logical steps to achieve the goal of the story. Thinking through these steps helps the team subsume the user story into the system and consider how to implement them in a manner consistedn with the system’s metaphor and general UX tenets and guidelines. For example:
+1. **The team whiteboards a static user task list.** This exercise used to think about the logical steps to achieve the goal of the story. Thinking through these steps helps the team subsume the user story into the system and consider how to implement them in a manner consistent with the system’s metaphor and general UX tenets and guidelines. For example:
 
    ```
    1. User verifies email.
    2. User completes profile.
    3. User finds their practice.
-   4. User submits their profile to manage the practice.
+   4. User submits their request to manage the practice.
    ...
    5. User verifies that they have been authorized to manage the practice.
    ```
@@ -101,13 +101,13 @@ This is the bulk of the two-week sprint where the development team develops. Thi
 
 1. **Review of the static click-through producing [comments and suggestions](https://github.com/flexion/qpp-design-exercise/blob/master/project_assets/design-deliverables/Round%201/team-feedback/QPP-RD1-comments.pdf).** This review is a collaborative exercise that includes the user, UX designer, and Front-End Developer identifies opportunities for improvement.
 
-1. **Implement [improvments from feedback](https://github.com/flexion/qpp-design-exercise/tree/master/project_assets/design-deliverables/Round%202).** The Front-End Developer and UX Designer make improvements to the static click-through based on the comments and suggestions recieved in the previous step.
+1. **Implement [improvements from feedback](https://github.com/flexion/qpp-design-exercise/tree/master/project_assets/design-deliverables/Round%202).** The Front-End Developer and UX Designer make improvements to the static click-through based on the comments and suggestions received in the previous step.
 
-1. **Create automated ATDD/BDD tests from the statuc click-through.** These tests drive production development and are integrated into the CI/CD pipeline.
+1. **Create automated ATDD/BDD tests from the static click-through.** These tests drive production development and are integrated into the CI/CD pipeline.
 
-1. **The development team collaborates to fully build out the user story and its supporting unit tests.** Implementation decouples design, style, and function to the greatest extent possible. We create a “Clean Architecture”.
+1. **The development team collaborates to fully build out the user story and its supporting unit tests.** Implementation decouples design, style, and function to the greatest extent possible. We create a “Clean Architecture.”
 
-1. **[The user story is validated](https://github.com/flexion/qpp-design-exercise/blob/master/project_assets/user-research/QPPTest-Report.pdf)**. Validation is accommplished by testing with real people who have been identified as likely prospective users of the system. You can view [video snippets of several test users'](https://flexion.wistia.com/medias/hs5ka2xir6) major pain points. A password is required to access the video: ```cmsuser1```
+1. **[The user story is validated](https://github.com/flexion/qpp-design-exercise/blob/master/project_assets/user-research/QPPTest-Report.pdf)**. Validation is accomplished by testing with real people who have been identified as likely prospective users of the system. You can view [video snippets of several test users'](https://flexion.wistia.com/medias/hs5ka2xir6) major pain points. A password is required to access the video: ```cmsuser1```
 
 1. **Recommendations from the user testing are placed into the project backlog for implementation in the application.**
 
@@ -115,7 +115,7 @@ This is the bulk of the two-week sprint where the development team develops. Thi
 
 ### 5. Review the Sprint
 
-The Sprint Review is the accountability ceremony, where the team demos anything that meets the Definition of Done by time this meeting takes place, or explains why things they expected to complete weren't. The PO accepts or rejects their work. The team also discusses why stories that they expected to complete aren't complete yet.(Hopefully, there have been enough regular interactions with the PO that the team already knows that the completed story will be accepted.)
+The Sprint Review is the accountability ceremony, where the team demos anything that meets the Definition of Done by the time this meeting takes place, or explains why things they expected to complete weren't. The PO accepts or rejects their work. The team also discusses why stories that they expected to complete aren't complete yet. (Hopefully, there have been enough regular interactions with the PO that the team already knows that the completed story will be accepted.)
 
 1. **The team demos that the story.** The demo covers the acceptance criteria for the story and is only given for stories that meet a predefined subset of the Definition of Done.
 
@@ -128,28 +128,31 @@ Visit and interact with the application at https://flexion.github.io/qpp-deploy.
 
 For the purpose of this exercise, the application is pre-populated with test data. As a user you will complete the following steps:
 
-1. Begin at the landing page which includes a login form. Please login with the username: user@presencehealth.org and the password: password
+1. Begin at the landing page, which includes a login form. Please login with the username: ```user@presencehealth.org``` and the password: ```password```
 
 1. After successful login, you are redirected to a page outlining the steps that you have completed thus far, and the next step to take in the process. Click 'complete profile'
 
 1. You are taken to a profile form. Fill out the profile form and after all required fields are filled in, click 'Submit'
 
-1. You are taken back to the page outlining the steps in the process. It now shows the next actionable step "connect with practice"
+1. You are taken back to the page outlining the steps in the process. It now shows the next actionable step "request to connect with practice"
 
-1. Clicking "connect to practice" takes you to a page asking you to search for a practice. Because we have pre-populated the test data, you can enter anything into the search input and click 'Search'
+1. Clicking "request to connect" takes you to a page asking you to search for a practice. Because we have pre-populated the test data, you can enter anything into the search input and click 'Search'
 
-1. Hypothetical search results are returned. Next to one of the practices, choose which role you would like to connect to the practice as and click 'connect'
+1. Hypothetical search results are returned. Next to one of the practices, choose which role you would like to connect to the practice as and click 'request to connect'
 
 1. You will be redirected to your Dashboard and see a success message with any next steps.
 
-1. On your dashboard, you will see all of your pending and approved practice connections as well as your pending and approved surrogates, with the ability to approve, deny, or revoke access on each surrogate.
+1. On your dashboard, you will see all of your pending and approved practice connections. Pending and approved surrogate users have also been stubbed into the dashboard for demonstration purposes. This functionality is outside the acceptance criteria for this sprint and is not yet implemented.
 
-1. All of the data entered is saved in your browser's local storage. If you want to start from the beginning with a clean user, while logged in, click 'clear profile' link in main menu.
+1. All of the data entered is saved in your browser's local storage. If you want to start from the beginning with a clean user you'll need to clear your profile. While logged in, click the 'clear profile' link in main menu and you'll be able to start fresh.
 
 ## Developer Installation Instructions
 ### Prerequisites
-The following must be installed on your computer
-Node 4 or higher https://nodejs.org/en/, together with NPM 3 or higher https://www.npmjs.com/, and Angular CLI https://cli.angular.io/
+The following must be installed on your computer:
+
+* Node 4 or higher https://nodejs.org/en/ 
+* NPM 3 or higher https://www.npmjs.com/
+* Angular CLI https://cli.angular.io/
 
 Install angular-cli globally: `npm install -g angular-cli@1.0.0-beta.24`
 
@@ -163,12 +166,12 @@ From the command line, navigate to the project root. Install project dependencie
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Development Instructions
-The application is built with the javascript framework Angular 2, and was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.22-1. 
+The application is built with the JavaScript framework Angular 2, and was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.22-1. 
 
 Webpack is used for building static assets. We are using Protractor for end-to-end tests, and Karma for unit tests. CSS is compiled from SASS
 
 ### File Structure
-The following lists our file structure. The main development files are located in src/app. Inside that folder lives sub-components, each relating to a specific function or process in the application.
+The following lists our file structure. The main development files are located in src/app. Inside that folder live sub-components, each relating to a specific function or process in the application.
 
 ```
 qpp-design-exercise/
@@ -227,7 +230,7 @@ qpp-design-exercise/
 
 ## Development Tasks
 
-### Generate new componenets
+### Generate new components
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
 
@@ -244,9 +247,9 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 Before running the tests make sure you are serving the app via `ng serve`.
 
-### Deploying to Github Pages
+### Deploying to GitHub Pages
 
-Run `ng github-pages:deploy` to deploy to Github Pages.
+Run `ng github-pages:deploy` to deploy to GitHub Pages.
 
 ### Further help
 
