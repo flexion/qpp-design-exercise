@@ -11,17 +11,17 @@ export class UsersService {
     }
 
     getUsers(): Observable<User[]> {
-        return this.http.get('/api/users')
+        return this.http.get('api/users')
             .map((r: Response) => r.json());
     }
 
     updateUser(user: User) {
-        return this.http.put(`/api/users/${user.id}`, JSON.stringify(user))
+        return this.http.put(`api/users/${user.id}`, JSON.stringify(user))
             .map((r: Response) => r.json());
     }
 
     registerUser(registration: Registration) {
-        return this.http.post('/api/users', registration)
+        return this.http.post('api/users', registration)
             .map((r: Response) => r.json());
     }
 

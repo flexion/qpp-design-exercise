@@ -19,23 +19,13 @@ import {PracticeComponent} from './practice/practice.component';
 import {PracticesService} from './_services/practices.service';
 import {fakeBackendProvider} from './_services/fake-backend';
 import {UsersService} from './_services/users.service';
-import { ProviderConnectionComponent } from './provider-connection/provider-connection.component';
+import {ProviderConnectionComponent} from './provider-connection/provider-connection.component';
 import {ProviderSearchListComponent} from './provider-connection/provider-search-list';
 import {ConnectionsService} from './_services/connections.service';
 import {ProviderConnectionRoleComponent} from './provider-connection/provider-connection-role';
 import {AppRoutingModule} from './app-routing.module';
-
-const appRoutes: Routes = [
-    {path: '', component: LoginComponent},
-    {path: 'login', component: LoginComponent},
-    {path: 'register', component: RegistrationComponent},
-    {path: 'profile', component: ProfileComponent, canActivate: [AuthGuard]},
-    {path: 'clear-profile', component: ClearProfileComponent, canActivate: [AuthGuard]},
-    {path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard]},
-    {path: 'steps', component: StepsComponent, canActivate: [AuthGuard]},
-    {path: 'practice', component: PracticeComponent, canActivate: [AuthGuard]},
-    {path: '**', redirectTo: 'steps'}
-];
+import {APP_BASE_HREF} from '@angular/common';
+import {environment} from '../environments/environment';
 
 @NgModule({
     declarations: [
@@ -68,7 +58,9 @@ const appRoutes: Routes = [
         PracticesService,
         fakeBackendProvider,
         MockBackend,
-        BaseRequestOptions
+        BaseRequestOptions,
+        {provide: APP_BASE_HREF, useValue: environment.baseUrl},
+//      {provide: LocationStrategy, useClass: CustomLocationStrategy}
     ],
     bootstrap: [AppComponent]
 })
