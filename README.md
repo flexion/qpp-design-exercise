@@ -20,10 +20,13 @@ Our chosen technologies include:
 * Sass - http://sass-lang.com/
 * Node.js - https://nodejs.org/en/
 * Node Package Manager - https://www.npmjs.com/
-
-For usability testing we used Windows 10's built in XBox App Game DVR "Game Bar" to capture screens and voiceover, with a smal external boom microphone. 
+* Google Analytics - https://www.google.com/analytics/analytics/
 
 We've elected to deploy to GitHub Pages for this project.
+
+For usability testing we used Windows 10's built in XBox App Game DVR "Game Bar" to capture screens and voiceover, with a smal external boom microphone.
+
+For accessibility testing we tested manually after using IDI Web Accesibility Checker http://achecker.ca/checker/ for an initial, high level check against Section 508 and WCAG 2.0 AA guidelines.
 
 ### Our Agile Dev Process
 
