@@ -1,7 +1,7 @@
 # qpp-design-exercise
   * [Approach](#approach)
   * [Design Process Steps](#design-process-steps)
-  * [Installation](#installation)
+  * [Developer Installation Instructions](#developer-installation-instructions)
 
 ## Approach
 ### Our Response
