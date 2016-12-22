@@ -25,6 +25,7 @@ import {ProviderConnectionRoleComponent} from './provider-connection/provider-co
 import {AppRoutingModule} from './app-routing.module';
 
 const appRoutes: Routes = [
+    {path: '', component: LoginComponent},
     {path: 'login', component: LoginComponent},
     {path: 'register', component: RegistrationComponent},
     {path: 'profile', component: ProfileComponent, canActivate: [AuthGuard]},

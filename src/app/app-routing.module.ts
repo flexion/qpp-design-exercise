@@ -9,13 +9,14 @@ import {PracticeComponent} from './practice/practice.component';
 import {NgModule} from '@angular/core';
 
 const appRoutes: Routes = [
+    {path: '', component: LoginComponent},
     {path: 'login', component: LoginComponent},
     {path: 'register', component: RegistrationComponent},
     {path: 'profile', component: ProfileComponent, canActivate: [AuthGuard]},
     {path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard]},
     {path: 'steps', component: StepsComponent, canActivate: [AuthGuard]},
     {path: 'practice', component: PracticeComponent, canActivate: [AuthGuard]},
-    {path: '**', redirectTo: 'profile'}
+    {path: '**', redirectTo: 'steps'}
 ];
 
 @NgModule({
