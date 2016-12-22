@@ -57,8 +57,8 @@ The purpose of Sprint Planning is to pull enough work into the next upcoming spr
 1. **The team whiteboards a static user task list.** This exercise used to think about the logical steps to achieve the goal of the story. Thinking through these steps helps the team subsume the user story into the system and consider how to implement them in a manner consistedn with the system’s metaphor and general UX tenets and guidelines. For example:
 
    ```
-   1. User completes profile.
-   2. User verifies profile.
+   1. User verifies email.
+   2. User completes profile.
    3. User finds their practice.
    4. User submits their profile to manage the practice.
    ...
