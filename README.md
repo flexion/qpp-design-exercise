@@ -88,7 +88,8 @@ The purpose of Sprint Planning is to pull enough work into the next upcoming spr
 
 This is the bulk of the two-week sprint where the development team develops. This includes identifying and evaluating options, developing them, testing them, and completing all tasks in the Definition of Done.
 
-1. UX designer(s) perform the initial UX tasks (collaborate with user and FE Dev) to develop low-fidelity static design options resulting in wireframes and a user flow, illustrating the steps a user would take to complete the task. https://github.com/flexion/qpp-design-exercise/blob/master/project_assets/design-deliverables/wireframes/QPP-wireframes.pdf
+1. **UX designers develop [low-fidelity static design options](https://github.com/flexion/qpp-design-exercise/blob/master/project_assets/design-deliverables/wireframes/QPP-wireframes.pdf
+).** These are the initial UX tasks (collaborate with user and FE Dev) that result in wireframes and a user flow, illustrating the steps a user would take to complete the task.
 
 1. FE Dev to create static (shallow working click-through) options in html/css (collaborate with user and UX designer). https://github.com/flexion/qpp-design-exercise/tree/master/project_assets/design-deliverables/Round%201
 
@@ -112,9 +113,9 @@ The Sprint Review is the accountability ceremony, where the team demos anything 
 
 1. **The team demos that the story.** The demo covers the acceptance criteria for the story and is only given for stories that meet a predefined subset of the Definition of Done.
 
-1. **Hand over system artifacts.** In this case, all artifacts are committed or uploaded into GitHub to which the PO and government have access.
+1. **Hand over [system artifacts](https://github.com/flexion/qpp-design-exercise).** In this case, all artifacts are committed or uploaded into GitHub to which the PO and government have access.
 
-1. **A working version of the system is accessible to the PO.**
+1. **A [working version of the system](URL to clickable prototype here) is accessible to the PO.**
 
 ## User Instructions
 Visit and interact with the application at <insert github pages url here> 
