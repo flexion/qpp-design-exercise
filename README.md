@@ -57,8 +57,8 @@ The purpose of Sprint Planning is to pull enough work into the next upcoming spr
 1. **The team whiteboards a static user task list.** This exercise used to think about the logical steps to achieve the goal of the story. Thinking through these steps helps the team subsume the user story into the system and consider how to implement them in a manner consistedn with the system’s metaphor and general UX tenets and guidelines. For example:
 
    ```
-   1. User completes profile.
-   2. User verifies profile.
+   1. User verifies email.
+   2. User completes profile.
    3. User finds their practice.
    4. User submits their profile to manage the practice.
    ...
@@ -127,11 +127,13 @@ For the purpose of this exercise, the application is pre-populated with test dat
 The following must be installed on your computer
 Node 4 or higher https://nodejs.org/en/, together with NPM 3 or higher https://www.npmjs.com/, and Angular CLI https://cli.angular.io/
 
+Install angular-cli globally: `npm install -g angular-cli@1.0.0-beta.24`
+
 ### Clone Project
 git clone https://github.com/flexion/qpp-design-exercise.git qpp-design-exercise
 
 ### Installation
-From the command line, navigate to the project root and install project dependencies with `npm install`. 
+From the command line, navigate to the project root. Install project dependencies by executing `npm install`. 
 
 ### Deploy on development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
