@@ -31,7 +31,7 @@
         </li>
         <li *ngIf="currentUser.step == 'connect'">
           <input id="connect-practices" type="checkbox" routerLink="/practice" class="cursor-pointer">
-          <label for="connect-practices"><a routerLink="/practice">Connect to Connect with Practices</a></label>
+          <label for="connect-practices"><a routerLink="/practice">Request to Connect with a Practice</a></label>
         </li>
       </ul>
     </div>
@@ -51,7 +51,7 @@
         [ngClass]="{'usa-button usa-button-big': currentUser.step === 'connect',
         'usa-button-outline-inverse usa-button-hover': currentUser.step != 'connect'}"
         routerLink="/practice" [disabled]="currentUser.step != 'connect'">
-      Connect with Practice
+      Request to Connect
     </button>
   </div>
 </section>
