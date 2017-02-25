@@ -11,7 +11,7 @@ import {User} from '../_models/user';
 export class LoginComponent implements OnInit {
 
     error: string;
-    model: any = {};
+    model: any = {'email': 'user@presencehealth.org', 'password': 'password'};
     returnUrl: string;
 
     constructor(private authentication: Authentication,
