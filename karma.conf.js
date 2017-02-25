@@ -8,21 +8,24 @@ module.exports = function (config) {
     plugins: [
       require('karma-jasmine'),
       require('karma-chrome-launcher'),
+      require('angular-cli/plugins/karma'),
       require('karma-remap-istanbul'),
-      require('angular-cli/plugins/karma')
+      require('karma-jasmine-html-reporter'),
+      require('karma-junit-reporter'),
+      require('karma-coverage')
     ],
-    files: [
-      {pattern: './src/test.ts', watched: false},
-      {pattern: './src/assets/**', watched: false, included: false, nocache: false, served: true}
-    ],
-    proxies: {
-      '/assets': '/base/src/assets'
+    client: {
+      clearContext: false // leave Jasmine Spec Runner output visible in browser
     },
+    files: [
+      { pattern: './src/test.ts', watched: false }
+    ],
     preprocessors: {
-      './src/test.ts': ['angular-cli']
+      './src/test.ts': ['angular-cli'],
+      './dist/**/!(*spec).js': ['coverage']
     },
     mime: {
-      'text/x-typescript': ['ts', 'tsx']
+      'text/x-typescript': ['ts','tsx']
     },
     remapIstanbulReporter: {
       reports: {
@@ -30,19 +33,42 @@ module.exports = function (config) {
         lcovonly: './coverage/coverage.lcov'
       }
     },
+    webpackMiddleware: { stats: 'errors-only'},
     angularCli: {
       config: './angular-cli.json',
       environment: 'dev'
     },
     reporters: config.angularCli && config.angularCli.codeCoverage
-      ? ['progress', 'karma-remap-istanbul']
-      : ['progress'],
+      ? ['progress', 'karma-remap-istanbul', 'kjhtml', 'junit', 'coverage']
+      : ['progress', 'kjhtml', 'junit', 'coverage'],
+    coverageReporter: {
+      type:'json',
+      dir: 'coverage',
+      subdir: '.',
+      check: {
+        global: {
+          statements: 85,
+          lines: 85,
+          functions: 75,
+          branches: 50
+        }
+      }
+    },
+    junitReporter: {
+      outputDir: 'test_results',
+      outputFile: 'unitspecs.xml' ,
+      suite: 'qpp',
+      useBrowserName: true,
+      nameFormatter: undefined,
+      classNameFormatter: undefined,
+      properties: {}
+    },
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
-    autoWatch: false,
+    autoWatch: true,
+    progress: false,
     browsers: ['Chrome'],
     singleRun: true
-  })
-  ;
+  });
 };
