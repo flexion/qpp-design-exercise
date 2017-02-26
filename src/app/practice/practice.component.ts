@@ -8,11 +8,12 @@ import {Connection, EmployeeRole} from '../_models/surrogate';
 import {Router} from '@angular/router';
 import {Authentication} from '../_services/authentication';
 import {User} from '../_models/user';
+import {UsersService} from "../_services/users.service";
 
 @Component({
     selector: 'app-practice',
     templateUrl: './practice.component.html',
-    styleUrls: ['./practice.component.scss']
+    styleUrls: ['./practice.component.scss'],
 })
 export class PracticeComponent implements OnInit {
 
