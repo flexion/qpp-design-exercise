@@ -49,14 +49,16 @@
       </thead>
       <tbody>
       <tr *ngFor="let connection of (currentUser|async).connections">
-        <th scope="row">{{connection.provider.name}}</th>
-        <td>{{connection.provider.npi}}</td>
-        <td>{{getRoleName(connection.role)}}</td>
-        <td><span class="usa-color-text"
-                  [ngClass]="{'usa-color-text-green': connection.status === 1,
-                  'usa-color-text-primary': connection.status != 1}">
-          {{getConnectionStatus(connection.status)}}</span>
+        <ng-container *ngIf="connection.provider">
+          <th scope="row">{{connection.provider.name}}</th>
+          <td>{{connection.provider.npi}}</td>
+          <td>{{getRoleName(connection.role)}}</td>
+          <td><span class="usa-color-text"
+                    [ngClass]="{'usa-color-text-green': connection.status === 1,
+                    'usa-color-text-primary': connection.status != 1}">
+            {{getConnectionStatus(connection.status)}}</span>
         </td>
+        </ng-container>
       </tr>
       </tbody>
     </table>

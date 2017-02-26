@@ -19,10 +19,7 @@ import {PracticeComponent} from './practice/practice.component';
 import {PracticesService} from './_services/practices.service';
 import {fakeBackendProvider} from './_services/fake-backend';
 import {UsersService} from './_services/users.service';
-import {ProviderConnectionComponent} from './provider-connection/provider-connection.component';
-import {ProviderSearchListComponent} from './provider-connection/provider-search-list';
 import {ConnectionsService} from './_services/connections.service';
-import {ProviderConnectionRoleComponent} from './provider-connection/provider-connection-role';
 import {AppRoutingModule} from './app-routing.module';
 import {APP_BASE_HREF} from '@angular/common';
 import {environment} from '../environments/environment';
@@ -37,10 +34,7 @@ import {environment} from '../environments/environment';
         ClearProfileComponent,
         DashboardComponent,
         StepsComponent,
-        PracticeComponent,
-        ProviderConnectionComponent,
-        ProviderSearchListComponent,
-        ProviderConnectionRoleComponent
+        PracticeComponent
     ],
     imports: [
         BrowserModule,

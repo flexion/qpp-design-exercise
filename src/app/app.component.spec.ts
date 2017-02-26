@@ -13,9 +13,6 @@ import {MockBackend} from '@angular/http/testing';
 import {BaseRequestOptions, XHRBackend, HttpModule} from '@angular/http';
 import {AppRoutingModule} from './app-routing.module';
 import {LoginComponent} from './login/login.component';
-import {ProviderConnectionRoleComponent} from './provider-connection/provider-connection-role';
-import {ProviderSearchListComponent} from './provider-connection/provider-search-list';
-import {ProviderConnectionComponent} from './provider-connection/provider-connection.component';
 import {PracticeComponent} from './practice/practice.component';
 import {StepsComponent} from './steps/steps.component';
 import {DashboardComponent} from './dashboard/dashboard.component';
@@ -37,9 +34,6 @@ describe('AppComponent', () => {
                 DashboardComponent,
                 StepsComponent,
                 PracticeComponent,
-                ProviderConnectionComponent,
-                ProviderSearchListComponent,
-                ProviderConnectionRoleComponent,
                 ClearProfileComponent
             ],
             imports: [AppRoutingModule, FormsModule, HttpModule],

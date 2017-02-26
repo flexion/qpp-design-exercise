@@ -6,6 +6,9 @@ import { DebugElement } from '@angular/core';
 import { StepsComponent } from './steps.component';
 import {AuthenticationStub} from '../../testing/authentication.stub';
 import {Authentication} from '../_services/authentication';
+import {RouterTestingModule} from '@angular/router/testing';
+import {User} from '../_models/user';
+import {Observable} from 'rxjs';
 
 describe('StepsComponent', () => {
   let component: StepsComponent;
