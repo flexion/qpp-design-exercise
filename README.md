@@ -7,13 +7,13 @@
 
 ## Approach
 ### Our Response
-While there were multiple allowed response options for this design exercise, ranging from a written narrative to a fully working prototype and everything in between, we chose to build a clickable prototype using the web technologies that the team working on the exercise could deliver the fastest, supporting the rapid change cycles necessary to incorporate dynamic user feedback. 
+While there were multiple allowed response options for this design exercise, ranging from a written narrative to a fully working prototype and everything in between, we chose to build a clickable prototype using the web technologies that the team working on the exercise could deliver the fastest, supporting the rapid change cycles necessary to incorporate dynamic user feedback.
 
-Our prototype is written entirely in client-side code: ```HTML```, ```CSS``` and ```JavaScript``` with test data populated using a ```json``` array and storing session data in ```HTML5 Local Storage``` using a ```RESTful API``` call. 
+Our prototype is written entirely in client-side code: ```HTML```, ```CSS``` and ```JavaScript``` with test data populated using a ```json``` array and storing session data in ```HTML5 Local Storage``` using a ```RESTful API``` call.
 
 Our chosen technologies include:
 
-* AngularJS 2.0 - https://angular.io/
+* Angular - https://angular.io/
 * Angular CLI - https://github.com/angular/angular-cli
 * Webpack - https://webpack.github.io/
 * Draft U.S. Web Design Standards - https://standards.usa.gov/
@@ -46,7 +46,7 @@ The purpose of creating personas and their associated epics and user stories is 
 1. **Name and describe [the persona](https://github.com/flexion/qpp-design-exercise/blob/master/project_assets/design-deliverables/personas/QPP.Persona.-.Debra.pdf).**
 
 1. **Tell the user story.** At this point, we recommend that the PO focus on business-level stories so that option space of system interactions (to achieve the business goal) is as large as possible. The UX design process explores this space of options. Here is the user story we are assuming for this exercise:
-   
+
    ```
    As a Practice Manager, in order to manage my practice, I must be authorized to manage my practice.
    ```
@@ -67,14 +67,14 @@ The purpose of refining the backlog is to subsume new PO goals into the backlog 
    ```
 
 1. **The team estimates the value-flow rate relative to other user stories.** Two components are inputs to value-flow rate: relative cost of delay (estimated by business) and relative duration (estimated by Scrum team).
-   
+
 ### 3. Plan the Sprint.
 
 The purpose of Sprint Planning is to pull enough work into the next upcoming sprint to keep the team allocated but as focused as possible in their current state. The team drafts a plan for how to organize the work in the sprint. The granularity of atomic user stories for the Product Owner will likely require that they span multiple sprints, especially when UX research, testing, and deployment are included. So sprint planning is also where atomic PO user stories might be decomposed into smaller demonstrable user stories that can be ingested into the sprint.
 
 1. **The PO introduces upcoming stories in value-flow rate order.**
 
-1. **The team reviews the story with the PO.** Acceptance criteria and story point estimates are adjusted as needed. (We used a [GitHub project as a proxy for a story card](https://github.com/flexion/qpp-design-exercise/projects) for the purposes of this design exercise.) 
+1. **The team reviews the story with the PO.** Acceptance criteria and story point estimates are adjusted as needed. (We used a [GitHub project as a proxy for a story card](https://github.com/flexion/qpp-design-exercise/projects) for the purposes of this design exercise.)
 
 1. **The team accepts stories into the sprint**. This decision is based on measured velocity and estimated story points. If the next story is too large to fit into the sprint, the team divides the acceptance criteria into pieces and writes new stories based on those. This repeats until a story can be accepted.
 
@@ -131,7 +131,7 @@ The Sprint Review is the accountability ceremony, where the team demos anything 
 1. **A [working version of the system](https://flexion.github.io/qpp-deploy) is accessible to the PO.**
 
 ## User Instructions
-Visit and interact with the application at https://flexion.github.io/qpp-deploy. 
+Visit and interact with the application at https://flexion.github.io/qpp-deploy.
 
 For the purpose of this exercise, the application is pre-populated with test data. As a user you will complete the following steps:
 
@@ -157,23 +157,23 @@ For the purpose of this exercise, the application is pre-populated with test dat
 ### Prerequisites
 The following must be installed on your computer:
 
-* Node 4 or higher https://nodejs.org/en/ 
+* Node 4 or higher https://nodejs.org/en/
 * NPM 3 or higher https://www.npmjs.com/
 * Angular CLI https://cli.angular.io/
 
-Install angular-cli globally: `npm install -g angular-cli@1.0.0-beta.24`
+Install angular-cli globally: `npm install -g @angular/cli@1.0.0-rc.0`
 
 ### Clone Project
 git clone https://github.com/flexion/qpp-design-exercise.git qpp-design-exercise
 
 ### Installation
-From the command line, navigate to the project root. Install project dependencies by executing `npm install`. 
+From the command line, navigate to the project root. Install project dependencies by executing `npm install`.
 
 ### Deploy on development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Development Instructions
-The application is built with the JavaScript framework Angular 2, and was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.22-1. 
+The application is built with the JavaScript framework Angular, and was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.22-1.
 
 Webpack is used for building static assets. We are using Protractor for end-to-end tests, and Karma for unit tests. CSS is compiled from SASS
 
@@ -182,19 +182,19 @@ The following lists our file structure. The main development files are located i
 
 ```
 qpp-design-exercise/
- ├──e2e/                       * End-2-end testing 
+ ├──e2e/                       * End-2-end testing
  |   ├──app.e2e-spec.ts
  |   ├──app.po.ts         
  │   └──tsconfig.json        
  │
  ├──project_assets/  
- |   ├──design-deliverables/    * Mockups, wireframes, static html 
- |   ├──user-research/          * User research documentation 
+ |   ├──design-deliverables/    * Mockups, wireframes, static html
+ |   ├──user-research/          * User research documentation
  │   │
  |
  ├──src/                       * our source files that will be compiled to javascript
  |   ├──index.html             * index page
- |   ├──main.ts                * Entry file for browser environment 
+ |   ├──main.ts                * Entry file for browser environment
  |   ├──polyfills.ts           * our polyfills file
  |   ├──tests.ts               
  |   ├──tsconfig.json
@@ -221,8 +221,8 @@ qpp-design-exercise/
  │   │
  │   └──assets/                * static assets are served here
  │       ├──css/               * CSS generated from SASS
- │       ├──data/              * test data json files 
- │       ├──fonts/             * uswds fonts 
+ │       ├──data/              * test data json files
+ │       ├──fonts/             * uswds fonts
  │       ├──img/               * image assets  
  │       ├──js/                * uswds javascript
  │       └──sass/              * sass file importing uswds assets
@@ -260,4 +260,4 @@ Run `ng github-pages:deploy` to deploy to GitHub Pages.
 
 ### Further help
 
-To get more help on the `angular-cli` use `ng help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+To get more help with `angular-cli` use `ng help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
