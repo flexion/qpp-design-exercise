@@ -4,11 +4,11 @@
 module.exports = function (config) {
   config.set({
     basePath: '',
-    frameworks: ['jasmine', 'angular-cli'],
+    frameworks: ['jasmine', '@angular/cli'],
     plugins: [
       require('karma-jasmine'),
       require('karma-chrome-launcher'),
-      require('angular-cli/plugins/karma'),
+      require('@angular/cli/plugins/karma'),
       require('karma-remap-istanbul'),
       require('karma-jasmine-html-reporter'),
       require('karma-junit-reporter'),
@@ -21,7 +21,7 @@ module.exports = function (config) {
       { pattern: './src/test.ts', watched: false }
     ],
     preprocessors: {
-      './src/test.ts': ['angular-cli'],
+      './src/test.ts': ['@angular/cli'],
       './dist/**/!(*spec).js': ['coverage']
     },
     mime: {
@@ -34,10 +34,6 @@ module.exports = function (config) {
       }
     },
     webpackMiddleware: { stats: 'errors-only'},
-    angularCli: {
-      config: './angular-cli.json',
-      environment: 'dev'
-    },
     reporters: config.angularCli && config.angularCli.codeCoverage
       ? ['progress', 'karma-remap-istanbul', 'kjhtml', 'junit', 'coverage']
       : ['progress', 'kjhtml', 'junit', 'coverage'],
