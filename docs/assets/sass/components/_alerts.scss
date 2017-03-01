@@ -1,0 +1,16 @@
+.usa-alert {
+  border-width: 2px;
+  border-style: solid;
+  &.usa-alert-success {
+    border-color: $color-green;
+  }
+  &.usa-alert-warning {
+    border-color: $color-gold;
+  }
+  &.usa-alert-error {
+    border-color: $color-secondary-dark;
+  }
+  &.usa-alert-info {
+    border-color: $color-primary;
+  }
+}
